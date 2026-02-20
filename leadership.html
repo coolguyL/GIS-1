@@ -1,0 +1,1272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leadership - Gosain International School</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    />
+    <style>
+      /* Reuse all CSS variables and base styles */
+      :root {
+        --primary-blue: #0a2463;
+        --secondary-blue: #1e40af;
+        --accent-gold: #d4af37;
+        --light-gold: #f4e4c1;
+        --light-gray: #f8fafc;
+        --medium-gray: #e2e8f0;
+        --dark-gray: #334155;
+        --text-dark: #1e293b;
+        --white: #ffffff;
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-padding {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+
+      .section-title .title-decoration {
+        height: 4px;
+        width: 80px;
+        background: linear-gradient(
+          to right,
+          var(--primary-blue),
+          var(--accent-gold)
+        );
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+
+      .section-title p {
+        color: var(--dark-gray);
+        max-width: 700px;
+        margin: 15px auto 0;
+        font-size: 1.1rem;
+      }
+
+      /* Header - Same as previous pages */
+      /* Header & Top Bar */
+      .top-bar {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        padding: 8px 0;
+        font-size: 0.9rem;
+      }
+
+      .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .contact-info {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        color: var(--white);
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        color: var(--accent-gold);
+      }
+      .page-header {
+        background:
+          linear-gradient(rgba(10, 36, 99, 0.9), rgba(10, 36, 99, 0.8)),
+          url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 120px 0 80px;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        color: var(--white);
+      }
+
+      .breadcrumb {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+      }
+
+      .breadcrumb a {
+        color: var(--accent-gold);
+        text-decoration: none;
+      }
+
+      /* Leadership Styles */
+      .leadership-categories {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 40px 0 60px;
+        flex-wrap: wrap;
+      }
+
+      .category-btn {
+        padding: 12px 24px;
+        background: var(--light-gray);
+        border: none;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        color: var(--text-dark);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .category-btn:hover,
+      .category-btn.active {
+        background: var(--primary-blue);
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      .leadership-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 40px;
+      }
+
+      .leader-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+      }
+
+      .leader-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .leader-image {
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .leader-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .leader-card:hover .leader-image img {
+        transform: scale(1.05);
+      }
+
+      .leader-badge {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(10, 36, 99, 0.8));
+        color: var(--white);
+        padding: 15px;
+        text-align: center;
+      }
+
+      .leader-info {
+        padding: 30px;
+      }
+
+      .leader-name {
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+      }
+
+      .leader-designation {
+        color: var(--accent-gold);
+        font-weight: 500;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .leader-qualifications {
+        background: var(--light-gray);
+        padding: 15px;
+        border-radius: var(--radius-md);
+        margin: 15px 0;
+      }
+
+      .qualification-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 0;
+      }
+
+      .qualification-item i {
+        color: var(--accent-gold);
+      }
+
+      .leader-message {
+        font-style: italic;
+        color: var(--dark-gray);
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 2px solid var(--light-gray);
+      }
+
+      /* Management Team Styles */
+      .management-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .management-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 30px;
+        text-align: center;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+        border-top: 5px solid var(--accent-gold);
+      }
+
+      .management-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .management-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--light-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+
+      .management-icon i {
+        font-size: 1.8rem;
+        color: var(--primary-blue);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .page-header h1 {
+          font-size: 2.5rem;
+        }
+
+        .section-padding {
+          padding: 60px 0;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+
+        .leadership-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .leadership-categories {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .category-btn {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .leader-image {
+          height: 250px;
+        }
+
+        .management-grid {
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+      }
+
+      @media (max-width: 480px) {
+        .page-header h1 {
+          font-size: 1.8rem;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
+
+        .leadership-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .management-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .leader-info {
+          padding: 20px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span
+              >+91 91001-200-800 | +91 92001-200-800 | +91 93001-200-800</span
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@gosaingroup.com</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="container header-content">
+        <div class="logo-container">
+          <img
+            src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png"
+            alt="GIS Logo"
+            class="logo"
+          />
+          <div class="school-name">
+            <h1>Gosain International School</h1>
+            <div class="tagline">Excellence in Education Since 2005</div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href="index.html#registration" class="btn btn-accent">
+            <i class="fas fa-user-plus"></i> Admission Open
+          </a>
+          <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="nav-container" id="navContainer">
+          <ul class="nav-menu" id="navMenu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-school"></i> About Us</a>
+            </li>
+            <li>
+              <a href="academics.html"
+                ><i class="fas fa-graduation-cap"></i> Academics</a
+              >
+            </li>
+            <li>
+              <a href="leadership.html" class="active"
+                ><i class="fas fa-users"></i> Leadership</a
+              >
+            </li>
+            <li>
+              <a href="facilities.html"
+                ><i class="fas fa-building"></i> Facilities</a
+              >
+            </li>
+            <li>
+              <a href="campuses.html"
+                ><i class="fas fa-map-marker-alt"></i> Campuses</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html"
+                ><i class="fas fa-phone-alt"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="container">
+        <h1>Leadership Team</h1>
+        <p>Visionary leaders guiding GIS towards educational excellence</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> >
+          <span>Leadership</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leadership Categories -->
+    <div class="container">
+      <div class="leadership-categories">
+        <button class="category-btn active" data-category="founders">
+          Founders
+        </button>
+        <button class="category-btn" data-category="principals">
+          Principals
+        </button>
+        <button class="category-btn" data-category="management">
+          Management
+        </button>
+        <button class="category-btn" data-category="board">
+          Board Members
+        </button>
+      </div>
+    </div>
+
+    <!-- Founders Section -->
+    <section id="founders" class="section-padding leadership-category active">
+      <div class="container">
+        <div class="section-title">
+          <h2>Founders & Visionaries</h2>
+          <div class="title-decoration"></div>
+          <p>The visionary founders who established GIS in 2005</p>
+        </div>
+
+        <div class="leadership-grid">
+          <div class="leader-card">
+            <div class="leader-image">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                alt="Chairman"
+              />
+              <div class="leader-badge">
+                <h3 style="color: var(--white); margin: 0">
+                  Founder & Chairman
+                </h3>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3 class="leader-name">Mr. Sujit Das</h3>
+              <span class="leader-designation"
+                >Founder & Chairman, GIS Group</span
+              >
+
+              <div class="leader-qualifications">
+                <div class="qualification-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>M.B.A. (Education Management), Harvard University</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-award"></i>
+                  <span>25+ Years in Education Sector</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-star"></i>
+                  <span>Recipient of National Education Award 2020</span>
+                </div>
+              </div>
+
+              <p>
+                Visionary educationist who established GIS with a mission to
+                provide quality education to students in Odisha. Under his
+                leadership, GIS has grown from a single campus to four
+                state-of-the-art facilities across the state.
+              </p>
+
+              <div class="leader-message">
+                "Education is not just about academic excellence, but about
+                shaping character and building future leaders who can contribute
+                meaningfully to society."
+              </div>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <div class="leader-image">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80"
+                alt="Managing Director"
+              />
+              <div class="leader-badge">
+                <h3 style="color: var(--white); margin: 0">
+                  Managing Director
+                </h3>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3 class="leader-name">Mr. Risi Singh</h3>
+              <span class="leader-designation"
+                >Managing Director, GIS Group</span
+              >
+
+              <div class="leader-qualifications">
+                <div class="qualification-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>M.Sc. (Physics), IIT Delhi</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-award"></i>
+                  <span>18+ Years in Educational Administration</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-star"></i>
+                  <span>Expert in Strategic Planning & Development</span>
+                </div>
+              </div>
+
+              <p>
+                Instrumental in the strategic expansion of GIS across Odisha.
+                Focuses on infrastructure development, faculty training, and
+                implementing innovative educational practices.
+              </p>
+
+              <div class="leader-message">
+                "Our commitment is to create an ecosystem where every child can
+                discover their potential and excel in their chosen fields."
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principals Section -->
+    <section
+      id="principals"
+      class="section-padding leadership-category"
+      style="background-color: var(--light-gray)"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2>Campus Principals</h2>
+          <div class="title-decoration"></div>
+          <p>Dedicated academic leaders at each campus</p>
+        </div>
+
+        <div class="leadership-grid">
+          <div class="leader-card">
+            <div class="leader-image">
+              <img
+                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                alt="Bhubaneswar Principal"
+              />
+              <div class="leader-badge">
+                <h3 style="color: var(--white); margin: 0">Principal</h3>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3 class="leader-name">Dr. Anjali Mohanty</h3>
+              <span class="leader-designation">Principal, GIS Bhubaneswar</span>
+
+              <div class="leader-qualifications">
+                <div class="qualification-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Ph.D. (Education), University of Delhi</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-award"></i>
+                  <span>15+ Years as Principal</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-star"></i>
+                  <span>Best Principal Award 2022</span>
+                </div>
+              </div>
+
+              <p>
+                Leads the flagship campus with focus on academic excellence and
+                holistic development. Implemented innovative teaching
+                methodologies and digital learning platforms.
+              </p>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <div class="leader-image">
+              <img
+                src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Cuttack Principal"
+              />
+              <div class="leader-badge">
+                <h3 style="color: var(--white); margin: 0">Principal</h3>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3 class="leader-name">Mr. Sanjay Patnaik</h3>
+              <span class="leader-designation">Principal, GIS Cuttack</span>
+
+              <div class="leader-qualifications">
+                <div class="qualification-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>M.Ed., M.Phil. (Education)</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-award"></i>
+                  <span>12+ Years in School Administration</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-star"></i>
+                  <span>Expert in Student Counseling</span>
+                </div>
+              </div>
+
+              <p>
+                Specializes in creating student-centric learning environments.
+                Focuses on sports and co-curricular activities along with
+                academic excellence.
+              </p>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <div class="leader-image">
+              <img
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                alt="Rourkela Principal"
+              />
+              <div class="leader-badge">
+                <h3 style="color: var(--white); margin: 0">Principal</h3>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3 class="leader-name">Ms. Priyanka Sharma</h3>
+              <span class="leader-designation">Principal, GIS Rourkela</span>
+
+              <div class="leader-qualifications">
+                <div class="qualification-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>M.Sc. (Chemistry), M.Ed.</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-award"></i>
+                  <span>10+ Years in STEM Education</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-star"></i>
+                  <span>Innovation in Science Education Award</span>
+                </div>
+              </div>
+
+              <p>
+                Expert in STEM education with focus on laboratory-based learning
+                and research-oriented approach. Leads the hostel facilities at
+                Rourkela campus.
+              </p>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <div class="leader-image">
+              <img
+                src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                alt="Berhampur Principal"
+              />
+              <div class="leader-badge">
+                <h3 style="color: var(--white); margin: 0">Principal</h3>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3 class="leader-name">Dr. Rajesh Kumar</h3>
+              <span class="leader-designation">Principal, GIS Berhampur</span>
+
+              <div class="leader-qualifications">
+                <div class="qualification-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Ph.D. (Mathematics), IIT Madras</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-award"></i>
+                  <span>8+ Years in Educational Leadership</span>
+                </div>
+                <div class="qualification-item">
+                  <i class="fas fa-star"></i>
+                  <span>Digital Learning Specialist</span>
+                </div>
+              </div>
+
+              <p>
+                Leads the newest campus with focus on digital learning and
+                sustainable practices. Implements innovative teaching methods
+                and technology integration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Management Section -->
+    <section id="management" class="section-padding leadership-category">
+      <div class="container">
+        <div class="section-title">
+          <h2>Management Team</h2>
+          <div class="title-decoration"></div>
+          <p>Professional administrators ensuring smooth operations</p>
+        </div>
+
+        <div class="management-grid">
+          <div class="management-card">
+            <div class="management-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h4>Academic Director</h4>
+            <p>
+              Oversees curriculum development and academic quality across all
+              campuses.
+            </p>
+            <div
+              style="
+                margin-top: 15px;
+                color: var(--accent-gold);
+                font-weight: 500;
+              "
+            >
+              Dr. Meera Singh
+            </div>
+          </div>
+
+          <div class="management-card">
+            <div class="management-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h4>Dean of Students</h4>
+            <p>
+              Manages student affairs, discipline, and overall student
+              development.
+            </p>
+            <div
+              style="
+                margin-top: 15px;
+                color: var(--accent-gold);
+                font-weight: 500;
+              "
+            >
+              Mr. Amit Kumar
+            </div>
+          </div>
+
+          <div class="management-card">
+            <div class="management-icon">
+              <i class="fas fa-money-check-alt"></i>
+            </div>
+            <h4>Finance Director</h4>
+            <p>
+              Manages financial operations, budgeting, and resource allocation.
+            </p>
+            <div
+              style="
+                margin-top: 15px;
+                color: var(--accent-gold);
+                font-weight: 500;
+              "
+            >
+              Ms. Sunita Patel
+            </div>
+          </div>
+
+          <div class="management-card">
+            <div class="management-icon">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <h4>Infrastructure Head</h4>
+            <p>
+              Oversees maintenance and development of school infrastructure.
+            </p>
+            <div
+              style="
+                margin-top: 15px;
+                color: var(--accent-gold);
+                font-weight: 500;
+              "
+            >
+              Mr. Ramesh Yadav
+            </div>
+          </div>
+
+          <div class="management-card">
+            <div class="management-icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h4>Marketing Director</h4>
+            <p>Manages admissions, public relations, and school branding.</p>
+            <div
+              style="
+                margin-top: 15px;
+                color: var(--accent-gold);
+                font-weight: 500;
+              "
+            >
+              Ms. Neha Sharma
+            </div>
+          </div>
+
+          <div class="management-card">
+            <div class="management-icon">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <h4>HR Director</h4>
+            <p>
+              Manages faculty recruitment, training, and professional
+              development.
+            </p>
+            <div
+              style="
+                margin-top: 15px;
+                color: var(--accent-gold);
+                font-weight: 500;
+              "
+            >
+              Mr. Vikram Das
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Board Members Section -->
+    <section
+      id="board"
+      class="section-padding leadership-category"
+      style="background-color: var(--light-gray)"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2>Board of Governors</h2>
+          <div class="title-decoration"></div>
+          <p>Eminent personalities guiding the strategic direction</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto">
+          <div
+            style="
+              background: var(--white);
+              padding: 40px;
+              border-radius: var(--radius-lg);
+              box-shadow: var(--shadow-md);
+            "
+          >
+            <h3
+              style="
+                color: var(--primary-blue);
+                margin-bottom: 30px;
+                text-align: center;
+              "
+            >
+              Board Composition
+            </h3>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+              "
+            >
+              <div>
+                <h4 style="color: var(--secondary-blue); margin-bottom: 15px">
+                  Education Experts
+                </h4>
+                <ul style="list-style: none">
+                  <li
+                    style="
+                      padding: 10px 0;
+                      border-bottom: 1px solid var(--light-gray);
+                    "
+                  >
+                    <i
+                      class="fas fa-user-tie"
+                      style="color: var(--accent-gold); margin-right: 10px"
+                    ></i>
+                    Dr. A. K. Mishra (Former VC)
+                  </li>
+                  <li
+                    style="
+                      padding: 10px 0;
+                      border-bottom: 1px solid var(--light-gray);
+                    "
+                  >
+                    <i
+                      class="fas fa-user-tie"
+                      style="color: var(--accent-gold); margin-right: 10px"
+                    ></i>
+                    Prof. S. R. Nanda (Educationist)
+                  </li>
+                  <li style="padding: 10px 0">
+                    <i
+                      class="fas fa-user-tie"
+                      style="color: var(--accent-gold); margin-right: 10px"
+                    ></i>
+                    Ms. L. P. Das (Child Psychologist)
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 style="color: var(--secondary-blue); margin-bottom: 15px">
+                  Industry Leaders
+                </h4>
+                <ul style="list-style: none">
+                  <li
+                    style="
+                      padding: 10px 0;
+                      border-bottom: 1px solid var(--light-gray);
+                    "
+                  >
+                    <i
+                      class="fas fa-industry"
+                      style="color: var(--accent-gold); margin-right: 10px"
+                    ></i>
+                    Mr. R. K. Agrawal (Industrialist)
+                  </li>
+                  <li
+                    style="
+                      padding: 10px 0;
+                      border-bottom: 1px solid var(--light-gray);
+                    "
+                  >
+                    <i
+                      class="fas fa-chart-line"
+                      style="color: var(--accent-gold); margin-right: 10px"
+                    ></i>
+                    Ms. P. T. Rao (Management Expert)
+                  </li>
+                  <li style="padding: 10px 0">
+                    <i
+                      class="fas fa-lightbulb"
+                      style="color: var(--accent-gold); margin-right: 10px"
+                    ></i>
+                    Dr. M. S. Reddy (Innovation Expert)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              style="
+                margin-top: 40px;
+                padding: 20px;
+                background: var(--light-gold);
+                border-radius: var(--radius-md);
+              "
+            >
+              <h4 style="color: var(--primary-blue); margin-bottom: 15px">
+                Board Responsibilities
+              </h4>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                  gap: 15px;
+                "
+              >
+                <div style="text-align: center">
+                  <div
+                    style="
+                      width: 50px;
+                      height: 50px;
+                      background: var(--primary-blue);
+                      color: var(--white);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto 10px;
+                    "
+                  >
+                    <i class="fas fa-bullseye"></i>
+                  </div>
+                  <span>Strategic Planning</span>
+                </div>
+                <div style="text-align: center">
+                  <div
+                    style="
+                      width: 50px;
+                      height: 50px;
+                      background: var(--primary-blue);
+                      color: var(--white);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto 10px;
+                    "
+                  >
+                    <i class="fas fa-balance-scale"></i>
+                  </div>
+                  <span>Policy Formulation</span>
+                </div>
+                <div style="text-align: center">
+                  <div
+                    style="
+                      width: 50px;
+                      height: 50px;
+                      background: var(--primary-blue);
+                      color: var(--white);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto 10px;
+                    "
+                  >
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                  <span>Financial Oversight</span>
+                </div>
+                <div style="text-align: center">
+                  <div
+                    style="
+                      width: 50px;
+                      height: 50px;
+                      background: var(--primary-blue);
+                      color: var(--white);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin: 0 auto 10px;
+                    "
+                  >
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span>Quality Assurance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <img src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png" alt="GIS Logo" class="footer-logo">
+                        <p>Gosain International School (GIS) is a premier group of CBSE affiliated schools across Odisha, providing quality education with international standards since 2005. We are committed to nurturing future leaders through holistic education.</p>
+                        <div class="social-links" style="margin-top: 20px;">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+                            <li><a href="leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a></li>
+                            <li><a href="facilities.html"><i class="fas fa-chevron-right"></i> Facilities</a></li>
+                            <li><a href="campuses.html"><i class="fas fa-chevron-right"></i> Campuses</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Important Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                            <li><a href="notices.html"><i class="fas fa-chevron-right"></i> Notices</a></li>
+                            <li><a href="admission.html"><i class="fas fa-chevron-right"></i> Admission</a></li>
+                            <li><a href="careers.html"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Corporate Office:</strong><br>
+                                   Metro Greenwoods Trisulia,<br>
+                                Cuttack, Odisha - 754005
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    +91 9101-200-800, +91 9201-200-800, +91 9301-200-800
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    info@gosaingroup.com<br>
+                                    principal@gosaingroup.com
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2026 Gosain International School (GIS). All Rights Reserved. | G-Tech Solutions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // Mobile Navigation
+      const mobileToggle = document.getElementById("mobileToggle");
+      const navContainer = document.getElementById("navContainer");
+
+      mobileToggle.addEventListener("click", () => {
+        navContainer.classList.toggle("active");
+        mobileToggle.innerHTML = navContainer.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      // Leadership Categories Toggle
+      const categoryBtns = document.querySelectorAll(".category-btn");
+      const leadershipCategories = document.querySelectorAll(
+        ".leadership-category",
+      );
+
+      categoryBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const category = btn.getAttribute("data-category");
+
+          // Remove active class from all buttons and sections
+          categoryBtns.forEach((b) => b.classList.remove("active"));
+          leadershipCategories.forEach((section) =>
+            section.classList.remove("active"),
+          );
+
+          // Add active class to clicked button
+          btn.classList.add("active");
+
+          // Show corresponding section
+          const targetSection = document.getElementById(category);
+          if (targetSection) {
+            targetSection.classList.add("active");
+
+            // Smooth scroll to section
+            window.scrollTo({
+              top: targetSection.offsetTop - 100,
+              behavior: "smooth",
+            });
+          }
+
+          // Close mobile menu if open
+          if (window.innerWidth <= 992) {
+            navContainer.classList.remove("active");
+            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+          }
+        });
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 992) {
+          navContainer.classList.remove("active");
+          mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+
+      // Initialize first section as active
+      document.querySelector(".leadership-category").classList.add("active");
+    </script>
+  </body>
+</html>

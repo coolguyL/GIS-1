@@ -1,0 +1,1617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Gosain International School</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Reuse all CSS from main page */
+      :root {
+        --primary-blue: #0a2463;
+        --secondary-blue: #1e40af;
+        --accent-gold: #d4af37;
+        --light-gold: #f4e4c1;
+        --light-gray: #f8fafc;
+        --medium-gray: #e2e8f0;
+        --dark-gray: #334155;
+        --text-dark: #1e293b;
+        --white: #ffffff;
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-padding {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+
+      .section-title .title-decoration {
+        height: 4px;
+        width: 80px;
+        background: linear-gradient(
+          to right,
+          var(--primary-blue),
+          var(--accent-gold)
+        );
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+
+      .section-title p {
+        color: var(--dark-gray);
+        max-width: 700px;
+        margin: 15px auto 0;
+        font-size: 1.1rem;
+      }
+
+      /* Button Styles */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 28px;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--secondary-blue);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-accent {
+        background-color: var(--accent-gold);
+        color: var(--primary-blue);
+      }
+
+      .btn-accent:hover {
+        background-color: #c19b2e;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        color: var(--primary-blue);
+        border: 2px solid var(--primary-blue);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      /* Header & Navigation - Same as index */
+      .top-bar {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        padding: 8px 0;
+        font-size: 0.9rem;
+      }
+
+      .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .contact-info {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .main-header {
+        background-color: var(--white);
+        box-shadow: var(--shadow-sm);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: var(--transition);
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        position: relative;
+        flex-wrap: wrap;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-shrink: 0;
+        min-width: 300px;
+      }
+
+      .logo {
+        height: 70px;
+        width: auto;
+        transition: var(--transition);
+      }
+
+      .school-name h1 {
+        font-size: 1.8rem;
+        color: var(--primary-blue);
+        line-height: 1.2;
+      }
+
+      .school-name .tagline {
+        color: var(--accent-gold);
+        font-weight: 500;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        order: 3;
+      }
+
+      .nav-container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 20px;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2px;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav-menu > li {
+        position: relative;
+        flex-shrink: 0;
+      }
+
+      .nav-menu a {
+        color: var(--text-dark);
+        text-decoration: none;
+        padding: 12px 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 500;
+        border-radius: var(--radius-sm);
+        transition: var(--transition);
+        white-space: nowrap;
+        font-size: 0.95rem;
+      }
+
+      .nav-menu a:hover {
+        background-color: var(--light-gray);
+        color: var(--primary-blue);
+      }
+
+      .nav-menu a.active {
+        background-color: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--primary-blue);
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-sm);
+        transition: var(--transition);
+        z-index: 1001;
+        order: 2;
+      }
+
+      /* About Page Specific Styles */
+      .page-header {
+        background:
+          linear-gradient(rgba(10, 36, 99, 0.9), rgba(10, 36, 99, 0.8)),
+          url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 120px 0 80px;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        color: var(--white);
+      }
+
+      .breadcrumb {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+      }
+
+      .breadcrumb a {
+        color: var(--accent-gold);
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      .about-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 40px 0 60px;
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        padding: 12px 24px;
+        background: var(--light-gray);
+        border: none;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        color: var(--text-dark);
+        cursor: pointer;
+        transition: var(--transition);
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .tab-btn:hover {
+        background: var(--medium-gray);
+        transform: translateY(-2px);
+      }
+
+      .tab-btn.active {
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .tab-content {
+        display: none;
+        animation: fadeIn 0.5s ease;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Vision & Mission */
+      .vision-mission-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 40px;
+      }
+
+      .vision-card,
+      .mission-card {
+        background: var(--white);
+        padding: 40px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        position: relative;
+        border-top: 5px solid var(--accent-gold);
+      }
+
+      .vision-icon,
+      .mission-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--light-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+      }
+
+      .vision-icon i,
+      .mission-icon i {
+        font-size: 1.8rem;
+        color: var(--primary-blue);
+      }
+
+      /* History Timeline */
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 60px auto 0;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: var(--accent-gold);
+      }
+
+      .timeline-item {
+        display: flex;
+        margin-bottom: 50px;
+        position: relative;
+      }
+
+      .timeline-item:nth-child(odd) {
+        justify-content: flex-end;
+      }
+
+      .timeline-content {
+        width: 45%;
+        padding: 25px;
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        position: relative;
+        border: 2px solid var(--light-gray);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        text-align: right;
+      }
+
+      .timeline-year {
+        position: absolute;
+        top: -20px;
+        background: var(--primary-blue);
+        color: var(--white);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+      }
+
+      .timeline-item:nth-child(even) .timeline-year {
+        right: -70px;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-year {
+        left: -70px;
+      }
+
+      /* Achievements Grid */
+      .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .achievement-card {
+        background: var(--white);
+        padding: 30px;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+      }
+
+      .achievement-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .achievement-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--light-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+
+      .achievement-icon i {
+        font-size: 2rem;
+        color: var(--primary-blue);
+      }
+
+      .achievement-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin: 10px 0;
+      }
+
+      /* Governance Grid */
+      .governance-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .governance-card {
+        background: var(--white);
+        padding: 30px;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+      }
+
+      .governance-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .governance-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--light-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+
+      .governance-icon i {
+        color: var(--primary-blue);
+        font-size: 1.5rem;
+      }
+
+      /* Footer - Same as index */
+      footer {
+        background-color: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .footer-main {
+        padding: 60px 0;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+      }
+
+      .footer-logo {
+        height: 70px;
+        margin-bottom: 20px;
+      }
+
+      .footer-about p {
+        margin-top: 15px;
+        opacity: 0.9;
+        line-height: 1.8;
+      }
+
+      .footer-column h3 {
+        color: var(--accent-gold);
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-column h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--accent-gold);
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-gold);
+        transform: translateX(5px);
+      }
+
+      .contact-list {
+        list-style: none;
+      }
+
+      .contact-list li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .footer-bottom {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .mobile-toggle {
+          display: flex;
+        }
+
+        .nav-container {
+          position: fixed;
+          top: 140px;
+          left: 0;
+          width: 100%;
+          background-color: var(--white);
+          box-shadow: var(--shadow-lg);
+          border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+          z-index: 999;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease;
+          margin-left: 0;
+          display: block;
+        }
+
+        .nav-container.active {
+          max-height: 80vh;
+          overflow-y: auto;
+        }
+
+        .nav-menu {
+          flex-direction: column;
+          width: 100%;
+          padding: 20px;
+          gap: 5px;
+        }
+
+        .page-header h1 {
+          font-size: 2.5rem;
+        }
+
+        .timeline::before {
+          left: 30px;
+        }
+
+        .timeline-item {
+          flex-direction: column;
+          align-items: flex-start;
+          padding-left: 60px;
+        }
+
+        .timeline-content {
+          width: 100%;
+          text-align: left !important;
+        }
+
+        .timeline-year {
+          position: absolute;
+          left: 0 !important;
+          right: auto !important;
+          top: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .section-padding {
+          padding: 60px 0;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+
+        .vision-card,
+        .mission-card {
+          padding: 25px;
+        }
+
+        .about-tabs {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .tab-btn {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .page-header {
+          padding: 100px 0 60px;
+        }
+
+        .page-header h1 {
+          font-size: 1.8rem;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
+
+        .vision-mission-grid,
+        .achievements-grid,
+        .governance-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span
+              >+91 91001-200-800 | +91 92001-200-800 | +91 93001-200-800</span
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@gosaingroup.com</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="container header-content">
+        <div class="logo-container">
+          <img
+            src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png"
+            alt="GIS Logo"
+            class="logo"
+          />
+          <div class="school-name">
+            <h1>Gosain International School</h1>
+            <div class="tagline">Excellence in Education Since 2005</div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href="index.html#registration" class="btn btn-accent">
+            <i class="fas fa-user-plus"></i> Admission Open
+          </a>
+          <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="nav-container" id="navContainer">
+          <ul class="nav-menu" id="navMenu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="active"
+                ><i class="fas fa-school"></i> About Us</a
+              >
+            </li>
+            <li>
+              <a href="academics.html"
+                ><i class="fas fa-graduation-cap"></i> Academics</a
+              >
+            </li>
+            <!-- <li><a href="leadership.html"><i class="fas fa-users"></i> Leadership</a></li> -->
+            <li>
+              <a href="facilities.html"
+                ><i class="fas fa-building"></i> Facilities</a
+              >
+            </li>
+            <li>
+              <a href="campuses.html"
+                ><i class="fas fa-map-marker-alt"></i> Campuses</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html"
+                ><i class="fas fa-phone-alt"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="container">
+        <h1>About Our School</h1>
+        <p>Discover the legacy, vision, and achievements of GIS</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> >
+          <span>About Us</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="container">
+      <div class="about-tabs">
+        <button class="tab-btn active" data-tab="vision">
+          Vision & Mission
+        </button>
+        <button class="tab-btn" data-tab="history">Our History</button>
+        <button class="tab-btn" data-tab="achievements">Achievements</button>
+        <button class="tab-btn" data-tab="governance">Governance</button>
+      </div>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="container">
+      <!-- Vision & Mission Tab -->
+      <div class="tab-content active" id="vision-tab">
+        <div class="section-padding">
+          <div class="section-title">
+            <h2>Our Vision & Mission</h2>
+            <div class="title-decoration"></div>
+            <p>Guiding principles that shape our modern educational approach</p>
+          </div>
+
+          <div class="vision-mission-grid">
+            <div class="vision-card">
+              <div class="vision-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3>Our Vision</h3>
+              <p>
+                To revolutionize K-12 education by creating innovative learning
+                ecosystems that prepare students for 21st-century challenges
+                through cutting-edge infrastructure and future-ready curriculum.
+              </p>
+              <ul style="margin-top: 20px; list-style: none">
+                <li
+                  style="
+                    padding: 8px 0;
+                    border-bottom: 1px solid var(--light-gray);
+                  "
+                >
+                  <i
+                    class="fas fa-check-circle"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Next-generation learning environments
+                </li>
+                <li
+                  style="
+                    padding: 8px 0;
+                    border-bottom: 1px solid var(--light-gray);
+                  "
+                >
+                  <i
+                    class="fas fa-check-circle"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Industry-aligned skill development
+                </li>
+                <li
+                  style="
+                    padding: 8px 0;
+                    border-bottom: 1px solid var(--light-gray);
+                  "
+                >
+                  <i
+                    class="fas fa-check-circle"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Global competence with local relevance
+                </li>
+                <li style="padding: 8px 0">
+                  <i
+                    class="fas fa-check-circle"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Technology-integrated pedagogy
+                </li>
+              </ul>
+            </div>
+
+            <div class="mission-card">
+              <div class="mission-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h3>Our Mission</h3>
+              <p>
+                To deliver premium educational services through modern
+                infrastructure, innovative teaching methodologies, and
+                comprehensive support systems that ensure exceptional learning
+                outcomes and student success.
+              </p>
+              <div
+                style="
+                  margin-top: 30px;
+                  background: var(--light-gray);
+                  padding: 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <h4 style="color: var(--primary-blue); margin-bottom: 15px">
+                  Our Value Proposition
+                </h4>
+                <p>We provide a complete educational solution featuring:</p>
+                <ul style="margin-top: 10px; padding-left: 20px">
+                  <li>Smart classrooms with interactive technology</li>
+                  <li>NCF & NEP compliant curriculum framework</li>
+                  <li>Career guidance and skill development programs</li>
+                  <li>Regular progress tracking and parent engagement</li>
+                  <li>Safety-certified infrastructure and facilities</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 50px">
+            <a href="about-details.html" class="btn btn-primary">
+              <i class="fas fa-book-open"></i> Explore Our Educational Framework
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- History Tab -->
+      <div class="tab-content" id="history-tab">
+        <div class="section-padding">
+          <div class="section-title">
+            <h2>Our Growth Journey</h2>
+            <div class="title-decoration"></div>
+            <p>From vision to reality in modern education</p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Foundation & Planning</h3>
+                <div class="timeline-year">2020-2021</div>
+                <p>
+                  Extensive market research and planning phase. Developed
+                  educational framework aligned with NEP 2020. Secured premium
+                  locations for campus development.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>First Campus Launch</h3>
+                <div class="timeline-year">2021</div>
+                <p>
+                  Inaugurated our first premium campus with state-of-the-art
+                  infrastructure. Started with comprehensive early childhood to
+                  primary education programs.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Curriculum Development</h3>
+                <div class="timeline-year">2021-2022</div>
+                <p>
+                  Designed and implemented NCF & NEP compliant curriculum.
+                  Established partnerships with educational technology
+                  providers. Developed teacher training programs.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Expansion Phase</h3>
+                <div class="timeline-year">2022</div>
+                <p>
+                  Launched two additional campuses with enhanced facilities.
+                  Implemented digital learning platforms. Achieved 300+ student
+                  enrollment across all campuses.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Infrastructure Enhancement</h3>
+                <div class="timeline-year">2023</div>
+                <p>
+                  Upgraded all campuses with smart classroom technology.
+                  Established science and innovation labs. Implemented
+                  comprehensive safety and security systems.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Affiliation & Accreditation</h3>
+                <div class="timeline-year">2023-2024</div>
+                <p>
+                  Initiated CBSE affiliation process for all campuses. Received
+                  recognition for educational innovation. Implemented quality
+                  assurance framework.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Current Status</h3>
+                <div class="timeline-year">2024</div>
+                <p>
+                  Operating multiple successful campuses with 500+ students.
+                  Implementing hybrid learning models. Expanding to new
+                  locations with premium educational offerings.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 50px">
+            <a href="history-details.html" class="btn btn-primary">
+              <i class="fas fa-history"></i> View Our Growth Story
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements Tab -->
+      <div class="tab-content" id="achievements-tab">
+        <div class="section-padding">
+          <div class="section-title">
+            <h2>Our Milestones & Recognition</h2>
+            <div class="title-decoration"></div>
+            <p>
+              Excellence in academics, sports, and co-curricular achievements
+            </p>
+          </div>
+
+          <div class="achievements-grid">
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="achievement-number">4+</div>
+              <h4>Premium Campuses</h4>
+              <p>Modern educational facilities across strategic locations</p>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="achievement-number">500+</div>
+              <h4>Students Enrolled</h4>
+              <p>Trusted by parents for quality modern education</p>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-chess-king"></i>
+              </div>
+              <div class="achievement-number">6</div>
+              <h4>CHSE Toppers</h4>
+              <p>Produced 6 All Odisha CHSE toppers in last 7 years</p>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="achievement-number">95%</div>
+              <h4>Parent Satisfaction</h4>
+              <p>Based on recent feedback and satisfaction surveys</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 60px">
+            <h3
+              style="
+                text-align: center;
+                color: var(--primary-blue);
+                margin-bottom: 40px;
+              "
+            >
+              Quality Certifications & Partnerships
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+              "
+            >
+              <div
+                style="
+                  background: var(--light-gray);
+                  padding: 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <h4 style="color: var(--primary-blue)">
+                  <i
+                    class="fas fa-medal"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  NEP 2020 Implementation
+                </h4>
+                <p style="margin-top: 10px">
+                  Early adopter of National Education Policy 2020 framework with
+                  integrated skill development
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: var(--light-gray);
+                  padding: 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <h4 style="color: var(--primary-blue)">
+                  <i
+                    class="fas fa-star"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Safety Certified Campuses
+                </h4>
+                <p style="margin-top: 10px">
+                  All campuses certified for safety, security, and
+                  child-friendly infrastructure
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: var(--light-gray);
+                  padding: 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <h4 style="color: var(--primary-blue)">
+                  <i
+                    class="fas fa-handshake"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Technology Partnerships
+                </h4>
+                <p style="margin-top: 10px">
+                  Collaborations with leading ed-tech companies for digital
+                  learning solutions
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: var(--light-gray);
+                  padding: 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <h4 style="color: var(--primary-blue)">
+                  <i
+                    class="fas fa-basketball-ball"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Sports Excellence
+                </h4>
+                <p style="margin-top: 10px">
+                  Recognition in chess, athletics, and other sports at district
+                  and state levels
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Governance Tab -->
+      <div class="tab-content" id="governance-tab">
+        <div class="section-padding">
+          <div class="section-title">
+            <h2>Governance & Administration</h2>
+            <div class="title-decoration"></div>
+            <p>Structured leadership for educational excellence</p>
+          </div>
+
+          <div class="governance-grid">
+            <div class="governance-card">
+              <div class="governance-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h4>Board of Governors</h4>
+              <p>
+                Strategic oversight and policy formulation by experienced
+                educationists and industry leaders.
+              </p>
+            </div>
+
+            <div class="governance-card">
+              <div class="governance-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <h4>Academic Council</h4>
+              <p>
+                Curriculum development and academic quality assurance by subject
+                matter experts.
+              </p>
+            </div>
+
+            <div class="governance-card">
+              <div class="governance-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h4>Parent-Teacher Association</h4>
+              <p>
+                Active participation of parents in school governance and
+                decision-making processes.
+              </p>
+            </div>
+
+            <div class="governance-card">
+              <div class="governance-icon">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h4>Ethics Committee</h4>
+              <p>
+                Ensuring ethical practices, transparency, and adherence to
+                educational standards.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-top: 60px">
+            <h3
+              style="
+                text-align: center;
+                color: var(--primary-blue);
+                margin-bottom: 30px;
+              "
+            >
+              Our Governance Structure
+            </h3>
+            <div
+              style="
+                background: var(--light-gray);
+                padding: 30px;
+                border-radius: var(--radius-lg);
+              "
+            >
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                  gap: 30px;
+                "
+              >
+                <div>
+                  <h4 style="color: var(--primary-blue); margin-bottom: 15px">
+                    Policy Framework
+                  </h4>
+                  <ul style="list-style: none">
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--medium-gray);
+                      "
+                    >
+                      <i
+                        class="fas fa-check"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      NEP 2020 Compliance
+                    </li>
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--medium-gray);
+                      "
+                    >
+                      <i
+                        class="fas fa-check"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      CBSE Affiliation Standards
+                    </li>
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--medium-gray);
+                      "
+                    >
+                      <i
+                        class="fas fa-check"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Quality Management
+                    </li>
+                    <li style="padding: 8px 0">
+                      <i
+                        class="fas fa-check"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Continuous Improvement
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 style="color: var(--primary-blue); margin-bottom: 15px">
+                    Committees & Functions
+                  </h4>
+                  <ul style="list-style: none">
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--medium-gray);
+                      "
+                    >
+                      <i
+                        class="fas fa-users"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Admissions Committee
+                    </li>
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--medium-gray);
+                      "
+                    >
+                      <i
+                        class="fas fa-book"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Curriculum Committee
+                    </li>
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--medium-gray);
+                      "
+                    >
+                      <i
+                        class="fas fa-shield-alt"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Safety Committee
+                    </li>
+                    <li style="padding: 8px 0">
+                      <i
+                        class="fas fa-chart-line"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Development Committee
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 style="color: var(--primary-blue); margin-bottom: 15px">
+                    Transparency & Accountability
+                  </h4>
+                  <ul style="list-style: none">
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--medium-gray);
+                      "
+                    >
+                      <i
+                        class="fas fa-file-alt"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Annual Reports
+                    </li>
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--medium-gray);
+                      "
+                    >
+                      <i
+                        class="fas fa-audit"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Financial Audit
+                    </li>
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid var(--medium-gray);
+                      "
+                    >
+                      <i
+                        class="fas fa-comments"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Feedback Mechanism
+                    </li>
+                    <li style="padding: 8px 0">
+                      <i
+                        class="fas fa-gavel"
+                        style="color: var(--accent-gold); margin-right: 10px"
+                      ></i>
+                      Grievance Redressal
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 50px">
+            <a href="governance-details.html" class="btn btn-primary">
+              <i class="fas fa-university"></i> View Complete Governance
+              Structure
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+   <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <img src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png" alt="GIS Logo" class="footer-logo">
+                        <p>Gosain International School (GIS) is a premier group of CBSE affiliated schools across Odisha, providing quality education with international standards since 2005. We are committed to nurturing future leaders through holistic education.</p>
+                        <div class="social-links" style="margin-top: 20px;">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+                            <li><a href="leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a></li>
+                            <li><a href="facilities.html"><i class="fas fa-chevron-right"></i> Facilities</a></li>
+                            <li><a href="campuses.html"><i class="fas fa-chevron-right"></i> Campuses</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Important Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                            <li><a href="notices.html"><i class="fas fa-chevron-right"></i> Notices</a></li>
+                            <li><a href="admission.html"><i class="fas fa-chevron-right"></i> Admission</a></li>
+                            <li><a href="careers.html"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Corporate Office:</strong><br>
+                                   Metro Greenwoods Trisulia,<br>
+                                Cuttack, Odisha - 754005
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    +91 9101-200-800, +91 9201-200-800, +91 9301-200-800
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    info@gosaingroup.com<br>
+                                    principal@gosaingroup.com
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2026 Gosain International School (GIS). All Rights Reserved. | G-Tech Solutions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // Tab Switching
+      const tabBtns = document.querySelectorAll(".tab-btn");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const tabId = btn.getAttribute("data-tab");
+
+          // Remove active class from all buttons and contents
+          tabBtns.forEach((b) => b.classList.remove("active"));
+          tabContents.forEach((c) => c.classList.remove("active"));
+
+          // Add active class to clicked button and corresponding content
+          btn.classList.add("active");
+          document.getElementById(`${tabId}-tab`).classList.add("active");
+        });
+      });
+
+      // Mobile Navigation
+      const mobileToggle = document.getElementById("mobileToggle");
+      const navContainer = document.getElementById("navContainer");
+
+      mobileToggle.addEventListener("click", () => {
+        navContainer.classList.toggle("active");
+        mobileToggle.innerHTML = navContainer.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 992) {
+            navContainer.classList.remove("active");
+            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+          }
+        });
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 992) {
+          navContainer.classList.remove("active");
+          mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+    </script>
+  </body>
+</html>

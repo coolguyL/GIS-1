@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Gosain International School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+  
+    <style>
+        /* Reuse all CSS variables and base styles */
+        :root {
+            --primary-blue: #0A2463;
+            --secondary-blue: #1E40AF;
+            --accent-gold: #D4AF37;
+            --light-gold: #F4E4C1;
+            --light-gray: #F8FAFC;
+            --medium-gray: #E2E8F0;
+            --dark-gray: #334155;
+            --text-dark: #1E293B;
+            --white: #FFFFFF;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .section-title .title-decoration {
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(to right, var(--primary-blue), var(--accent-gold));
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 15px auto 0;
+            font-size: 1.1rem;
+        }
+        
+        /* Header - Same as About Page */
+        /* Add only unique styles for academics page */
+        
+        .page-header {
+            background: linear-gradient(rgba(10, 36, 99, 0.9), rgba(10, 36, 99, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+        
+        .breadcrumb a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+        
+        /* Academics Specific Styles */
+        .academics-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 40px 0 60px;
+            flex-wrap: wrap;
+        }
+        
+        .academics-nav a {
+            padding: 12px 24px;
+            background: var(--light-gray);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .academics-nav a:hover,
+        .academics-nav a.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        /* Curriculum Section */
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .curriculum-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-top: 5px solid var(--accent-gold);
+        }
+        
+        .curriculum-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .curriculum-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .curriculum-icon i {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+        }
+        
+        .subject-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .subject-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .subject-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Faculty Section */
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .faculty-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .faculty-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .faculty-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .faculty-card:hover .faculty-image img {
+            transform: scale(1.05);
+        }
+        
+        .faculty-info {
+            padding: 25px;
+        }
+        
+        .faculty-qualification {
+            color: var(--accent-gold);
+            font-weight: 500;
+            margin: 10px 0;
+            display: block;
+        }
+        
+        .faculty-experience {
+            background: var(--light-gray);
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        /* Examination Section */
+        .exam-timetable {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            margin-top: 40px;
+        }
+        
+        .exam-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .exam-table th {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .exam-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .exam-table tr:hover {
+            background: var(--light-gray);
+        }
+        
+        /* CBSE Docs Section */
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .doc-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 25px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .doc-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .doc-icon i {
+            color: var(--primary-blue);
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: var(--primary-blue);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            margin-top: 15px;
+            transition: var(--transition);
+        }
+        
+        .download-btn:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .exam-timetable {
+                padding: 25px;
+            }
+            
+            .exam-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .academics-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .academics-nav a {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .curriculum-grid,
+            .faculty-grid,
+            .docs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .exam-table th,
+            .exam-table td {
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .faculty-image {
+                height: 200px;
+            }
+        }
+    </style>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 91001-200-800 | +91 92001-200-800 | +91 93001-200-800</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@gosaingroup.com</span>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png" alt="GIS Logo" class="logo">
+                <div class="school-name">
+                    <h1>Gosain International School</h1>
+                    <div class="tagline">Excellence in Education Since 2005</div>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <a href="index.html#registration" class="btn btn-accent">
+                    <i class="fas fa-user-plus"></i> Admission Open
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="nav-container" id="navContainer">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-school"></i> About Us</a></li>
+                    <li><a href="academics.html" class="active"><i class="fas fa-graduation-cap"></i> Academics</a></li>
+                    <!-- <li><a href="leadership.html"><i class="fas fa-users"></i> Leadership</a></li> -->
+                    <li><a href="facilities.html"><i class="fas fa-building"></i> Facilities</a></li>
+                    <li><a href="campuses.html"><i class="fas fa-map-marker-alt"></i> Campuses</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Academic Excellence</h1>
+            <p>Comprehensive CBSE curriculum with holistic development approach</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > 
+                <span>Academics</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academics Navigation -->
+    <div class="container">
+        <div class="academics-nav">
+            <a href="#curriculum" class="active">Curriculum</a>
+            <!-- <a href="#faculty">Faculty</a> -->
+            <a href="#examination">Examination</a>
+            <a href="#cbse-docs">CBSE Documents</a>
+        </div>
+    </div>
+
+    <!-- Curriculum Section -->
+<section id="curriculum" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Comprehensive Curriculum</h2>
+                <div class="title-decoration"></div>
+                <p>CBSE affiliated curriculum with focus on holistic development</p>
+            </div>
+            
+            <div class="curriculum-grid">
+                <div class="curriculum-container">
+    <!-- Pre-Primary Section -->
+    <div class="curriculum-section">
+       
+        <div class="curriculum-grid">
+            <div class="curriculum-card">
+                <div class="curriculum-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <h3>Play Group</h3>
+                <p>Early stimulation through play-based learning and sensory activities for toddlers.</p>
+                <ul class="subject-list">
+                    <li><i class="fas fa-gamepad" style="color: var(--accent-gold);"></i> Sensory Play</li>
+                    <li><i class="fas fa-hands" style="color: var(--accent-gold);"></i> Fine Motor Skills</li>
+                    <li><i class="fas fa-comments" style="color: var(--accent-gold);"></i> Language Development</li>
+                    <li><i class="fas fa-users" style="color: var(--accent-gold);"></i> Social Interaction</li>
+                    <li><i class="fas fa-music" style="color: var(--accent-gold);"></i> Rhythm & Music</li>
+                </ul>
+            </div>
+
+            <div class="curriculum-card">
+                <div class="curriculum-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h3>Nursery</h3>
+                <p>Developing basic cognitive skills, communication abilities, and social awareness.</p>
+                <ul class="subject-list">
+                    <li><i class="fas fa-shapes" style="color: var(--accent-gold);"></i> Shapes & Colors</li>
+                    <li><i class="fas fa-spell-check" style="color: var(--accent-gold);"></i> Pre-Writing Skills</li>
+                    <li><i class="fas fa-book-reader" style="color: var(--accent-gold);"></i> Story Time</li>
+                    <li><i class="fas fa-puzzle-piece" style="color: var(--accent-gold);"></i> Puzzle Solving</li>
+                    <li><i class="fas fa-hand-paper" style="color: var(--accent-gold);"></i> Creative Arts</li>
+                </ul>
+            </div>
+
+            <div class="curriculum-card">
+                <div class="curriculum-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <h3>LKG (Lower Kindergarten)</h3>
+                <p>Introduction to formal learning concepts through interactive and fun activities.</p>
+                <ul class="subject-list">
+                    <li><i class="fas fa-a" style="color: var(--accent-gold);"></i> Alphabet Recognition</li>
+                    <li><i class="fas fa-1" style="color: var(--accent-gold);"></i> Number Concepts (1-50)</li>
+                    <li><i class="fas fa-language" style="color: var(--accent-gold);"></i> Basic English & Odia</li>
+                    <li><i class="fas fa-seedling" style="color: var(--accent-gold);"></i> Nature Awareness</li>
+                    <li><i class="fas fa-running" style="color: var(--accent-gold);"></i> Physical Activities</li>
+                </ul>
+            </div>
+
+            <div class="curriculum-card">
+                <div class="curriculum-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>UKG (Upper Kindergarten)</h3>
+                <p>Advanced preparation for formal schooling with comprehensive skill development.</p>
+                <ul class="subject-list">
+                    <li><i class="fas fa-book" style="color: var(--accent-gold);"></i> Reading Readiness</li>
+                    <li><i class="fas fa-calculator" style="color: var(--accent-gold);"></i> Basic Mathematics</li>
+                    <li><i class="fas fa-pen" style="color: var(--accent-gold);"></i> Writing Skills</li>
+                    <li><i class="fas fa-globe" style="color: var(--accent-gold);"></i> General Knowledge</li>
+                    <li><i class="fas fa-hand-sparkles" style="color: var(--accent-gold);"></i> Creative Expression</li>
+                </ul>
+            </div>
+           <div class="curriculum-card">
+                    <div class="curriculum-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Primary School (I-V)</h3>
+                    <p>Foundational learning with emphasis on literacy, numeracy, and environmental awareness.</p>
+                    <ul class="subject-list">
+                        <li><i class="fas fa-book" style="color: var(--accent-gold);"></i> English Language</li>
+                        <li><i class="fas fa-calculator" style="color: var(--accent-gold);"></i> Mathematics</li>
+                        <li><i class="fas fa-globe-asia" style="color: var(--accent-gold);"></i> Environmental Studies</li>
+                        <li><i class="fas fa-paint-brush" style="color: var(--accent-gold);"></i> Art & Craft</li>
+                        <li><i class="fas fa-music" style="color: var(--accent-gold);"></i> Music & Dance</li>
+                    </ul>
+                </div>
+             <div class="curriculum-card">
+                    <div class="curriculum-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Middle School (VI-VIII)</h3>
+                    <p>Subject-based learning with introduction to sciences, social sciences, and languages.</p>
+                    <ul class="subject-list">
+                        <li><i class="fas fa-vial" style="color: var(--accent-gold);"></i> Science (Physics, Chemistry, Biology)</li>
+                        <li><i class="fas fa-landmark" style="color: var(--accent-gold);"></i> Social Science</li>
+                        <li><i class="fas fa-code" style="color: var(--accent-gold);"></i> Computer Science</li>
+                        <li><i class="fas fa-language" style="color: var(--accent-gold);"></i> Third Language (Sanskrit/Hindi)</li>
+                        <li><i class="fas fa-dumbbell" style="color: var(--accent-gold);"></i> Physical Education</li>
+                    </ul>
+                </div>
+                     
+                <!-- <div class="curriculum-card">
+                    <div class="curriculum-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Secondary School (IX-X)</h3>
+                    <p>Board-focused curriculum with choice of subjects and skill development programs.</p>
+                    <ul class="subject-list">
+                        <li><i class="fas fa-square-root-alt" style="color: var(--accent-gold);"></i> Mathematics</li>
+                        <li><i class="fas fa-dna" style="color: var(--accent-gold);"></i> Science Stream</li>
+                        <li><i class="fas fa-book-open" style="color: var(--accent-gold);"></i> Social Science</li>
+                        <li><i class="fas fa-laptop-code" style="color: var(--accent-gold);"></i> Information Technology</li>
+                        <li><i class="fas fa-chart-line" style="color: var(--accent-gold);"></i> Career Guidance</li>
+                    </ul>
+                </div> -->
+                   
+               
+        </div>
+    </div>
+                
+                
+              
+           
+             
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Faculty Section -->
+    <!-- <section id="faculty" class="section-padding" style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Distinguished Faculty</h2>
+                <div class="title-decoration"></div>
+                <p>Experienced educators dedicated to student success</p>
+            </div>
+            
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Senior Faculty">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Priya Sharma</h3>
+                        <span class="faculty-qualification">Ph.D. in Physics, IIT Delhi</span>
+                        <p>Head of Science Department with 15+ years of experience in teaching and research.</p>
+                        <span class="faculty-experience">Specialization: Quantum Mechanics</span>
+                    </div>
+                </div>
+                
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80" alt="Mathematics Faculty">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Mr. Rajesh Kumar</h3>
+                        <span class="faculty-qualification">M.Sc. Mathematics, BHU</span>
+                        <p>Senior Mathematics faculty with expertise in competitive exam preparation.</p>
+                        <span class="faculty-experience">Specialization: Calculus & Algebra</span>
+                    </div>
+                </div>
+                
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="English Faculty">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Ms. Anjali Das</h3>
+                        <span class="faculty-qualification">M.A. English, JNU</span>
+                        <p>Head of English Department with focus on communication skills and literature.</p>
+                        <span class="faculty-experience">Specialization: British Literature</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="faculty-details.html" class="btn btn-primary">
+                    <i class="fas fa-users"></i> Meet All Faculty Members
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Examination Section -->
+   <section id="examination" class="section-padding">
+    <div class="container">
+        <div class="section-title">
+            <h2>Examination System</h2>
+            <div class="title-decoration"></div>
+            <p>Comprehensive continuous assessment pattern for academic growth from Pre-Primary to Class 8</p>
+        </div>
+        
+        <div class="exam-timetable">
+            <h3 style="color: var(--primary-blue); margin-bottom: 20px; text-align: center;">Academic Assessment Schedule 2025-26</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
+                <!-- Pre-Primary Assessment -->
+                <div class="exam-level-card" style="background: #f0f8ff; padding: 25px; border-radius: var(--radius-md);">
+                    <div class="exam-level-header" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <i class="fas fa-child" style="font-size: 2rem; color: #ff6b6b;"></i>
+                        <h4 style="color: var(--primary-blue); margin: 0;">Pre-Primary (Play Group - UKG)</h4>
+                    </div>
+                    
+                    <div class="assessment-pattern" style="margin-bottom: 20px;">
+                        <h5 style="color: #ff6b6b; margin-bottom: 10px;">Continuous Assessment Pattern</h5>
+                        <ul style="padding-left: 20px;">
+                            <li style="margin-bottom: 8px;">Daily observation & activity-based evaluation</li>
+                            <li style="margin-bottom: 8px;">Monthly progress reports shared with parents</li>
+                            <li style="margin-bottom: 8px;">Quarterly developmental assessments</li>
+                            <li style="margin-bottom: 8px;">No formal written examinations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="key-dates">
+                        <h5 style="color: #ff6b6b; margin-bottom: 10px;">Key Assessment Periods</h5>
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                            <div style="background: white; padding: 12px; border-radius: 8px; border-left: 4px solid #ff6b6b;">
+                                <strong>Quarterly Review 1:</strong> August 15-20, 2025
+                            </div>
+                            <div style="background: white; padding: 12px; border-radius: 8px; border-left: 4px solid #ff6b6b;">
+                                <strong>Quarterly Review 2:</strong> November 10-15, 2025
+                            </div>
+                            <div style="background: white; padding: 12px; border-radius: 8px; border-left: 4px solid #ff6b6b;">
+                                <strong>Quarterly Review 3:</strong> February 5-10, 2026
+                            </div>
+                            <div style="background: white; padding: 12px; border-radius: 8px; border-left: 4px solid #ff6b6b;">
+                                <strong>Final Assessment:</strong> March 15-20, 2026
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Primary & Middle Assessment -->
+                <div class="exam-level-card" style="background: #fff0f7; padding: 25px; border-radius: var(--radius-md);">
+                    <div class="exam-level-header" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <i class="fas fa-graduation-cap" style="font-size: 2rem; color: #9c27b0;"></i>
+                        <h4 style="color: var(--primary-blue); margin: 0;">Primary & Middle (Class I-VIII)</h4>
+                    </div>
+                    
+                    <div class="assessment-pattern" style="margin-bottom: 20px;">
+                        <h5 style="color: #9c27b0; margin-bottom: 10px;">Term-based Examination Pattern</h5>
+                        <ul style="padding-left: 20px;">
+                            <li style="margin-bottom: 8px;">Two major terms with comprehensive examinations</li>
+                            <li style="margin-bottom: 8px;">Regular periodic tests throughout the year</li>
+                            <li style="margin-bottom: 8px;">Project-based assessments for practical subjects</li>
+                            <li style="margin-bottom: 8px;">Co-curricular activities evaluation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detailed Examination Schedule Table -->
+            <div style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <h4 style="background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)); color: white; padding: 15px 20px; margin: 0;">
+                    <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i>
+                    Detailed Examination Schedule 2025-26 (Class I-VIII)
+                </h4>
+                
+                <table class="exam-table" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: var(--light-gray);">
+                            <th style="padding: 15px; text-align: left; border-bottom: 2px solid var(--medium-gray);">Class</th>
+                            <th style="padding: 15px; text-align: left; border-bottom: 2px solid var(--medium-gray);">Periodic Test 1</th>
+                            <th style="padding: 15px; text-align: left; border-bottom: 2px solid var(--medium-gray);">Term 1 Exams</th>
+                            <th style="padding: 15px; text-align: left; border-bottom: 2px solid var(--medium-gray);">Periodic Test 2</th>
+                            <th style="padding: 15px; text-align: left; border-bottom: 2px solid var(--medium-gray);">Term 2 Exams</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--light-gray);">
+                            <td style="padding: 15px; font-weight: 600; color: var(--primary-blue);">Class I-II</td>
+                            <td style="padding: 15px;">Aug 5-7, 2025</td>
+                            <td style="padding: 15px;">Sep 25-30, 2025</td>
+                            <td style="padding: 15px;">Dec 10-12, 2025</td>
+                            <td style="padding: 15px;">Feb 20-25, 2026</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--light-gray);">
+                            <td style="padding: 15px; font-weight: 600; color: var(--primary-blue);">Class III-V</td>
+                            <td style="padding: 15px;">Aug 10-12, 2025</td>
+                            <td style="padding: 15px;">Oct 1-6, 2025</td>
+                            <td style="padding: 15px;">Dec 15-17, 2025</td>
+                            <td style="padding: 15px;">Feb 25-Mar 2, 2026</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--light-gray);">
+                            <td style="padding: 15px; font-weight: 600; color: var(--primary-blue);">Class VI-VII</td>
+                            <td style="padding: 15px;">Aug 15-17, 2025</td>
+                            <td style="padding: 15px;">Oct 5-10, 2025</td>
+                            <td style="padding: 15px;">Dec 18-20, 2025</td>
+                            <td style="padding: 15px;">Mar 3-8, 2026</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; font-weight: 600; color: var(--primary-blue);">Class VIII</td>
+                            <td style="padding: 15px;">Aug 18-20, 2025</td>
+                            <td style="padding: 15px;">Oct 8-13, 2025</td>
+                            <td style="padding: 15px;">Dec 20-22, 2025</td>
+                            <td style="padding: 15px;">Mar 5-10, 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Assessment Pattern Details -->
+            <div style="margin-top: 40px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: var(--radius-md);">
+                <h4 style="color: var(--primary-blue); margin-bottom: 25px; text-align: center;">
+                    <i class="fas fa-chart-pie" style="margin-right: 10px;"></i>
+                    Assessment Pattern & Weightage (Class I-VIII)
+                </h4>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                    <div style="background: white; padding: 25px; border-radius: var(--radius-md); box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 60px; height: 60px; background: #4CAF50; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h5 style="color: var(--primary-blue); margin: 0; font-size: 1.2rem;">Formative Assessment (40%)</h5>
+                        </div>
+                        <ul style="padding-left: 20px;">
+                            <li style="margin-bottom: 10px; padding-left: 5px;">
+                                <strong style="color: #4CAF50;">Periodic Tests (20%):</strong> Two written tests per term
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 5px;">
+                                <strong style="color: #4CAF50;">Multiple Assessments (15%):</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px;">
+                                    <li>Subject Enrichment Activities</li>
+                                    <li>Portfolio Assessment</li>
+                                    <li>Practical Work</li>
+                                    <li>Project Work</li>
+                                </ul>
+                            </li>
+                            <li style="padding-left: 5px;">
+                                <strong style="color: #4CAF50;">Notebook Submission (5%):</strong> Regularity, neatness, completion
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: var(--radius-md); box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 60px; height: 60px; background: #2196F3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h5 style="color: var(--primary-blue); margin: 0; font-size: 1.2rem;">Summative Assessment (60%)</h5>
+                        </div>
+                        <ul style="padding-left: 20px;">
+                            <li style="margin-bottom: 10px; padding-left: 5px;">
+                                <strong style="color: #2196F3;">Term 1 Examination (30%):</strong> Comprehensive written exam
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 5px;">
+                                <strong style="color: #2196F3;">Term 2 Examination (30%):</strong> Final written exam
+                            </li>
+                            <li style="padding-left: 5px;">
+                                <strong style="color: #2196F3;">Special Features:</strong>
+                                <ul style="margin-top: 5px; padding-left: 20px;">
+                                    <li>Objective & subjective questions</li>
+                                    <li>Practical assessments for Science & Computer</li>
+                                    <li>Speaking & listening tests for languages</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px; text-align: center; padding: 20px; background: white; border-radius: var(--radius-md); border-left: 5px solid var(--accent-gold);">
+                    <h5 style="color: var(--primary-blue); margin-bottom: 15px;">
+                        <i class="fas fa-info-circle" style="color: var(--accent-gold); margin-right: 10px;"></i>
+                        Important Notes
+                    </h5>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; text-align: left;">
+                        <div>
+                            <i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 8px;"></i>
+                            Minimum 75% attendance required for all exams
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 8px;"></i>
+                            Progress reports issued after each term
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 8px;"></i>
+                            Parent-teacher meetings after each assessment
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 8px;"></i>
+                            Remedial classes for students needing support
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CBSE Documents Section -->
+    <section id="cbse-docs" class="section-padding" style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2>CBSE Documents & Resources</h2>
+                <div class="title-decoration"></div>
+                <p>Official documents and resources for students and parents</p>
+            </div>
+            
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h4>CBSE Affiliation Certificate</h4>
+                    <p>Official CBSE affiliation documents for all campuses</p>
+                    <a href="#" class="download-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4>Academic Calendar 2024-25</h4>
+                    <p>Complete academic schedule including holidays and events</p>
+                    <a href="#" class="download-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Curriculum Documents</h4>
+                    <p>Detailed syllabus for all classes and streams</p>
+                    <a href="#" class="download-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h4>School Rules & Regulations</h4>
+                    <p>Code of conduct and school policies</p>
+                    <a href="#" class="download-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                
+                <!-- <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>Previous Year Results</h4>
+                    <p>Board examination results analysis (Last 5 years)</p>
+                    <a href="#" class="download-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div> -->
+                
+                <!-- <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h4>FAQ for Parents</h4>
+                    <p>Frequently asked questions about academics</p>
+                    <a href="#" class="download-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div> -->
+            </div>
+            
+            <!-- <div style="text-align: center; margin-top: 50px;">
+                <a href="resources.html" class="btn btn-primary">
+                    <i class="fas fa-database"></i> View All Resources
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <img src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png" alt="GIS Logo" class="footer-logo">
+                        <p>Gosain International School (GIS) is a premier group of CBSE affiliated schools across Odisha, providing quality education with international standards since 2005. We are committed to nurturing future leaders through holistic education.</p>
+                        <div class="social-links" style="margin-top: 20px;">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+                            <li><a href="leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a></li>
+                            <li><a href="facilities.html"><i class="fas fa-chevron-right"></i> Facilities</a></li>
+                            <li><a href="campuses.html"><i class="fas fa-chevron-right"></i> Campuses</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Important Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                            <li><a href="notices.html"><i class="fas fa-chevron-right"></i> Notices</a></li>
+                            <li><a href="admission.html"><i class="fas fa-chevron-right"></i> Admission</a></li>
+                            <li><a href="careers.html"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Corporate Office:</strong><br>
+                                   Metro Greenwoods Trisulia,<br>
+                                Cuttack, Odisha - 754005
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    +91 9101-200-800, +91 9201-200-800, +91 9301-200-800
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    info@gosaingroup.com<br>
+                                    principal@gosaingroup.com
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2026 Gosain International School (GIS). All Rights Reserved. | G-Tech Solutions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navContainer = document.getElementById('navContainer');
+        
+        mobileToggle.addEventListener('click', () => {
+            navContainer.classList.toggle('active');
+            mobileToggle.innerHTML = navContainer.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Academics Navigation Smooth Scroll
+        document.querySelectorAll('.academics-nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.academics-nav a').forEach(l => {
+                    l.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                link.classList.add('active');
+                
+                // Scroll to section
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile menu if open
+                if (window.innerWidth <= 992) {
+                    navContainer.classList.remove('active');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) {
+                navContainer.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+</html>

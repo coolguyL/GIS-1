@@ -1,0 +1,1537 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Gosain International School</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      :root {
+        --primary-blue: #0a2463;
+        --secondary-blue: #1e40af;
+        --accent-gold: #d4af37;
+        --light-gold: #f4e4c1;
+        --light-gray: #f8fafc;
+        --medium-gray: #e2e8f0;
+        --dark-gray: #334155;
+        --text-dark: #1e293b;
+        --white: #ffffff;
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-padding {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+
+      .section-title .title-decoration {
+        height: 4px;
+        width: 80px;
+        background: linear-gradient(
+          to right,
+          var(--primary-blue),
+          var(--accent-gold)
+        );
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+
+      .section-title p {
+        color: var(--dark-gray);
+        max-width: 700px;
+        margin: 15px auto 0;
+        font-size: 1.1rem;
+      }
+
+      /* Header */
+      .top-bar {
+        background: var(--primary-blue);
+        color: var(--white);
+        padding: 12px 0;
+        font-size: 0.9rem;
+      }
+
+      .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .contact-info {
+        display: flex;
+        gap: 25px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .contact-item i {
+        color: var(--accent-gold);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        color: var(--white);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        color: var(--accent-gold);
+        transform: translateY(-2px);
+      }
+
+      /* Main Header */
+      .main-header {
+        background: var(--white);
+        box-shadow: var(--shadow-sm);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo {
+        height: 60px;
+        width: auto;
+      }
+
+      .school-name h1 {
+        font-size: 1.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 5px;
+      }
+
+      .tagline {
+        font-size: 0.85rem;
+        color: var(--dark-gray);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .btn {
+        padding: 12px 30px;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .btn-accent {
+        background: var(--accent-gold);
+        color: var(--white);
+        border: none;
+      }
+
+      .btn-accent:hover {
+        background: #b89420;
+        transform: translateY(-2px);
+      }
+
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--primary-blue);
+        cursor: pointer;
+      }
+
+      .nav-container {
+        display: block;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+      }
+
+      .nav-menu a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 15px;
+        border-radius: var(--radius-sm);
+        transition: var(--transition);
+      }
+
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      /* Page Header */
+      .page-header {
+        background:
+          linear-gradient(rgba(10, 36, 99, 0.9), rgba(10, 36, 99, 0.8)),
+          url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 120px 0 80px;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        color: var(--white);
+      }
+
+      .breadcrumb {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+      }
+
+      .breadcrumb a {
+        color: var(--accent-gold);
+        text-decoration: none;
+      }
+
+      /* Contact Info Cards */
+      .contact-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .contact-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 40px;
+        text-align: center;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+        border-top: 5px solid var(--accent-gold);
+      }
+
+      .contact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .contact-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--light-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+      }
+
+      .contact-icon i {
+        font-size: 2rem;
+        color: var(--primary-blue);
+      }
+
+      .contact-details {
+        margin-top: 20px;
+      }
+
+      .contact-detail {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--light-gray);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      .contact-detail:last-child {
+        border-bottom: none;
+      }
+
+      .contact-detail i {
+        color: var(--accent-gold);
+        width: 20px;
+      }
+
+      /* Contact Form */
+      .contact-form-container {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 50px;
+        box-shadow: var(--shadow-lg);
+        margin-top: 40px;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--dark-gray);
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid var(--medium-gray);
+        border-radius: var(--radius-md);
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.1);
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .submit-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 40px;
+        background: var(--primary-blue);
+        color: var(--white);
+        border: none;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .submit-btn:hover {
+        background: var(--secondary-blue);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      /* Campus Locations */
+      .campus-locations {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .campus-location-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+      }
+
+      .campus-location-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .campus-map {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .campus-map iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .campus-details {
+        padding: 25px;
+      }
+
+      .campus-name {
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .campus-contact {
+        margin-top: 15px;
+      }
+
+      .campus-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--light-gray);
+      }
+
+      .campus-contact-item:last-child {
+        border-bottom: none;
+      }
+
+      .campus-contact-item i {
+        color: var(--accent-gold);
+        width: 20px;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .footer-main {
+        padding: 60px 0;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 50px;
+      }
+
+      .footer-about {
+        max-width: 400px;
+      }
+
+      .footer-logo {
+        height: 60px;
+        margin-bottom: 20px;
+      }
+
+      .footer-column h3 {
+        color: var(--white);
+        margin-bottom: 25px;
+        font-size: 1.2rem;
+      }
+
+      .contact-list {
+        list-style: none;
+      }
+
+      .contact-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+
+      .contact-list i {
+        color: var(--accent-gold);
+        margin-top: 5px;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: var(--white);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        opacity: 0.8;
+        transition: var(--transition);
+      }
+
+      .footer-links a:hover {
+        opacity: 1;
+        color: var(--accent-gold);
+        transform: translateX(5px);
+      }
+
+      .footer-bottom {
+        background: #091e42;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Contact Success Modal */
+      .contact-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 3000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .modal-content {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 50px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+      }
+
+      .modal-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--light-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+      }
+
+      .modal-icon i {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: var(--dark-gray);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .page-header h1 {
+          font-size: 2.5rem;
+        }
+
+        .section-padding {
+          padding: 60px 0;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .contact-form-container {
+          padding: 30px;
+        }
+
+        .nav-menu {
+          display: none;
+        }
+
+        .mobile-toggle {
+          display: block;
+        }
+
+        .nav-container.active .nav-menu {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: var(--white);
+          padding: 20px;
+          box-shadow: var(--shadow-md);
+          z-index: 1000;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .contact-cards,
+        .campus-locations {
+          grid-template-columns: 1fr;
+        }
+
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-card {
+          padding: 30px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .page-header h1 {
+          font-size: 1.8rem;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
+
+        .contact-form-container {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+ <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 9101200800</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@gosaingroup.com</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="container header-content">
+        <div class="logo-container">
+          <img
+            src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png"
+            alt="GIS Logo"
+            class="logo"
+          />
+          <div class="school-name">
+            <h1>Gosain International School</h1>
+            <div class="tagline">Excellence in Education Since 2005</div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href="index.html#registration" class="btn btn-accent">
+            <i class="fas fa-user-plus"></i> Admission Open
+          </a>
+          <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="nav-container" id="navContainer">
+          <ul class="nav-menu" id="navMenu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-school"></i> About Us</a>
+            </li>
+            <li>
+              <a href="academics.html"
+                ><i class="fas fa-graduation-cap"></i> Academics</a
+              >
+            </li>
+            <li>
+              <a href="facilities.html"
+                ><i class="fas fa-building"></i> Facilities</a
+              >
+            </li>
+            <li>
+              <a href="campuses.html"
+                ><i class="fas fa-map-marker-alt"></i> Campuses</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html" class="active"
+                ><i class="fas fa-phone-alt"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch with Gosain International School</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> >
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <section id="info" class="section-padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Information</h2>
+          <div class="title-decoration"></div>
+          <p>Multiple ways to reach out to us</p>
+        </div>
+
+        <div class="contact-cards">
+          <!-- Admission Office -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Admission Office</h3>
+            <p>For admission inquiries, campus visits, and registration</p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Jajpur Town, Odisha</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+                <span>+91 9101200800 | 9201200800 | 9301200800</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <span>info@gosaingroup.com</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 9:00 AM - 5:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- GIS Trisulia Campus -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-school"></i>
+            </div>
+            <h3>GIS Trisulia Campus</h3>
+            <p>Trisulia, Cuttack Campus for all academic inquiries</p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Trisulia, Cuttack, Odisha</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+               <span>+91 9101200800 | 9201200800 | 9301200800</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <span>info@gosaingroup.com</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 4:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kidzee Trisulia -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <h3>Kidzee Trisulia</h3>
+            <p>Early childhood education center for Play Group to UKG</p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Trisulia, Cuttack, Odisha</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+              <span>+91 9101200800 | 9201200800 | 9301200800</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <span>info@gosaingroup.com</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 4:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px">
+          <div
+            style="
+              background: var(--light-gray);
+              padding: 30px;
+              border-radius: var(--radius-lg);
+              max-width: 800px;
+              margin: 0 auto;
+            "
+          >
+            <h3 style="color: var(--primary-blue); margin-bottom: 20px">
+              Quick Connect
+            </h3>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="https://wa.me/919101200800"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  text-decoration: none;
+                  color: var(--primary-blue);
+                  background: #25d36610;
+                  padding: 12px 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <i
+                  class="fab fa-whatsapp"
+                  style="color: #25d366; font-size: 1.5rem"
+                ></i>
+                <div>
+                  <div style="font-weight: 600">WhatsApp-Trisulia</div>
+                  <div style="font-size: 0.9rem">+91 9101200800</div>
+                </div>
+              </a>
+              <a
+                href="https://wa.me/919201200800"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  text-decoration: none;
+                  color: var(--primary-blue);
+                  background: #25d36610;
+                  padding: 12px 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <i
+                  class="fab fa-whatsapp"
+                  style="color: #25d366; font-size: 1.5rem"
+                ></i>
+                <div>
+                  <div style="font-weight: 600">WhatsApp-Jajpur Branch</div>
+                  <div style="font-size: 0.9rem">+91 9201200800</div>
+                </div>
+              </a>
+              <a
+                href="tel:+919101200800"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  text-decoration: none;
+                  color: var(--primary-blue);
+                  background: var(--light-gold);
+                  padding: 12px 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <i
+                  class="fas fa-phone-alt"
+                  style="color: var(--accent-gold); font-size: 1.5rem"
+                ></i>
+                <div>
+                  <div style="font-weight: 600">Call Now-Trisulia</div>
+                  <div style="font-size: 0.9rem">+91 9101200800</div>
+                </div>
+              </a>
+              <a
+                href="tel:+919201200800"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  text-decoration: none;
+                  color: var(--primary-blue);
+                  background: var(--light-gold);
+                  padding: 12px 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <i
+                  class="fas fa-phone-alt"
+                  style="color: var(--accent-gold); font-size: 1.5rem"
+                ></i>
+                <div>
+                  <div style="font-weight: 600">Call Now-Jajpur</div>
+                  <div style="font-size: 0.9rem">+91 9201200800</div>
+                </div>
+              </a>
+              <a
+                href="mailto:info@gosaingroup.com"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  text-decoration: none;
+                  color: var(--primary-blue);
+                  background: var(--light-gray);
+                  padding: 12px 20px;
+                  border-radius: var(--radius-md);
+                "
+              >
+                <i
+                  class="fas fa-envelope"
+                  style="color: var(--primary-blue); font-size: 1.5rem"
+                ></i>
+                <div>
+                  <div style="font-weight: 600">Email Us</div>
+                  <div style="font-size: 0.9rem">info@gosaingroup.com</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Locations Section -->
+    <section
+      class="section-padding"
+      style="background-color: var(--light-gray)"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2>Campus Locations</h2>
+          <div class="title-decoration"></div>
+          <p>Find our campuses across Odisha</p>
+        </div>
+
+        <div class="campus-locations">
+          <!-- GIS Jajpur -->
+          <div class="campus-location-card">
+            <div class="campus-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3700.123456789012!2d86.12345678901234!3d20.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA3JzI0LjQiTiA4NsKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1621234567890!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+            <div class="campus-details">
+              <h3 class="campus-name">
+                <i class="fas fa-university"></i> GIS Jajpur
+              </h3>
+              <p>Jajpur Town, Odisha - 755001</p>
+
+              <div class="campus-contact">
+                <div class="campus-contact-item">
+                  <i class="fas fa-phone"></i>
+                  <span>+91 9101200800</span>
+                </div>
+                <div class="campus-contact-item">
+                  <i class="fas fa-clock"></i>
+                  <span>Mon-Sat: 8:00 AM - 4:00 PM</span>
+                </div>
+                <div class="campus-contact-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Classes: Play Group to Class 8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GIS Trisulia Cuttack -->
+          <div class="campus-location-card">
+            <div class="campus-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.123456789012!2d85.878123456789!3d20.512345678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1915b5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2sCuttack%2C%20Odisha!5e0!3m2!1sen!2sin!4v1621234567890!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+            <div class="campus-details">
+              <h3 class="campus-name">
+                <i class="fas fa-school"></i> GIS Trisulia Cuttack
+              </h3>
+              <p>Trisulia, Cuttack, Odisha - 754001</p>
+
+              <div class="campus-contact">
+                <div class="campus-contact-item">
+                  <i class="fas fa-phone"></i>
+                  <span>+91 9201200800</span>
+                </div>
+                <div class="campus-contact-item">
+                  <i class="fas fa-clock"></i>
+                  <span>Mon-Sat: 8:00 AM - 4:00 PM</span>
+                </div>
+                <div class="campus-contact-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Classes: Play Group to Class 8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kidzee Trisulia -->
+          <div class="campus-location-card">
+            <div class="campus-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.234567890123!2d85.87923456789012!3d20.52345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1916c6c6c6c6c6%3A0x6c6c6c6c6c6c6c6c!2sTrisulia%2C%20Cuttack!5e0!3m2!1sen!2sin!4v1621234567890!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+            <div class="campus-details">
+              <h3 class="campus-name">
+                <i class="fas fa-child"></i> Kidzee Trisulia
+              </h3>
+              <p>Trisulia, Cuttack, Odisha - 754001</p>
+
+              <div class="campus-contact">
+                <div class="campus-contact-item">
+                  <i class="fas fa-phone"></i>
+                  <span>+91 9301200800</span>
+                </div>
+                <div class="campus-contact-item">
+                  <i class="fas fa-clock"></i>
+                  <span>Mon-Sat: 8:00 AM - 4:00 PM</span>
+                </div>
+                <div class="campus-contact-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Classes: Play Group to UKG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Send Us a Message</h2>
+          <div class="title-decoration"></div>
+          <p>Fill out the form below and we'll get back to you soon</p>
+        </div>
+
+        <div class="contact-form-container">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName" class="form-label">Full Name *</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="phone" class="form-control" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-control" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="campus" class="form-label">Campus *</label>
+                <select id="campus" class="form-control form-select" required>
+                  <option value="">Select Campus</option>
+                  <option value="jajpur">GIS Jajpur</option>
+                  <option value="trisulia">GIS Trisulia Cuttack</option>
+                  <option value="kidzee">Kidzee Trisulia</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="purpose" class="form-label">Purpose *</label>
+                <select id="purpose" class="form-control form-select" required>
+                  <option value="">Select Purpose</option>
+                  <option value="admission">Admission Inquiry</option>
+                  <option value="visit">Campus Visit</option>
+                  <option value="fee">Fee Related</option>
+                  <option value="academic">Academic Query</option>
+                  <option value="principal">Principal's Office</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message *</label>
+              <textarea
+                id="message"
+                class="form-control"
+                placeholder="Please include student's age/grade for admission inquiries..."
+                required
+              ></textarea>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px">
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px">
+          <p style="color: var(--dark-gray); font-size: 0.9rem">
+            <i
+              class="fas fa-info-circle"
+              style="color: var(--accent-gold); margin-right: 5px"
+            ></i>
+            We respond to all inquiries within 24 hours on working days
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Info Section -->
+    <section
+      class="section-padding"
+      style="background-color: var(--light-gray)"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2>Quick Information</h2>
+          <div class="title-decoration"></div>
+          <p>Important details for parents and visitors</p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 30px;
+            "
+          >
+            <div
+              style="
+                background: var(--white);
+                padding: 25px;
+                border-radius: var(--radius-lg);
+                box-shadow: var(--shadow-sm);
+                text-align: center;
+              "
+            >
+              <i
+                class="fas fa-calendar-alt"
+                style="
+                  font-size: 2.5rem;
+                  color: var(--accent-gold);
+                  margin-bottom: 15px;
+                "
+              ></i>
+              <h4 style="color: var(--primary-blue); margin-bottom: 10px">
+                Office Hours
+              </h4>
+              <p>Monday to Saturday: 9:00 AM - 5:00 PM</p>
+              <p style="font-size: 0.9rem; color: var(--dark-gray)">
+                Closed on Sundays & Public Holidays
+              </p>
+            </div>
+
+            <div
+              style="
+                background: var(--white);
+                padding: 25px;
+                border-radius: var(--radius-lg);
+                box-shadow: var(--shadow-sm);
+                text-align: center;
+              "
+            >
+              <i
+                class="fas fa-user-clock"
+                style="
+                  font-size: 2.5rem;
+                  color: var(--accent-gold);
+                  margin-bottom: 15px;
+                "
+              ></i>
+              <h4 style="color: var(--primary-blue); margin-bottom: 10px">
+                Visit Timings
+              </h4>
+              <p>For Campus Visit: Mon-Sat 10:00 AM - 3:00 PM</p>
+              <p style="font-size: 0.9rem; color: var(--dark-gray)">
+                Prior appointment recommended
+              </p>
+            </div>
+
+            <div
+              style="
+                background: var(--white);
+                padding: 25px;
+                border-radius: var(--radius-lg);
+                box-shadow: var(--shadow-sm);
+                text-align: center;
+              "
+            >
+              <i
+                class="fas fa-file-alt"
+                style="
+                  font-size: 2.5rem;
+                  color: var(--accent-gold);
+                  margin-bottom: 15px;
+                "
+              ></i>
+              <h4 style="color: var(--primary-blue); margin-bottom: 10px">
+                Admission Process
+              </h4>
+              <p>
+                1. Inquiry → 2. Campus Visit → 3. Application → 4. Assessment →
+                5. Admission
+              </p>
+            </div>
+          </div>
+
+          <div
+            style="
+              background: var(--white);
+              padding: 30px;
+              border-radius: var(--radius-lg);
+              margin-top: 40px;
+              text-align: center;
+              box-shadow: var(--shadow-md);
+            "
+          >
+            <h4 style="color: var(--primary-blue); margin-bottom: 15px">
+              Contact Information
+            </h4>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                flex-wrap: wrap;
+              "
+            >
+              <div
+                style="
+                  font-size: 1.3rem;
+                  font-weight: 600;
+                  color: var(--primary-blue);
+                "
+              >
+                <i
+                  class="fas fa-phone-alt"
+                  style="color: var(--accent-gold); margin-right: 10px"
+                ></i>
+                +91 9101200800 / 9201200800 / 9301200800
+              </div>
+              <div style="font-size: 1.1rem; color: var(--dark-gray)">
+                <i
+                  class="fas fa-envelope"
+                  style="color: var(--accent-gold); margin-right: 10px"
+                ></i>
+                info@gosaingroup.com / principal@gosaingroup.com
+              </div>
+              <div style="font-size: 0.95rem; color: var(--medium-gray)">
+                24/7 Emergency Support Available
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Success Modal -->
+    <div class="contact-modal" id="contactModal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeContactModal()">
+          &times;
+        </button>
+        <div class="modal-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h2 style="color: var(--primary-blue); margin-bottom: 15px">
+          Message Sent Successfully!
+        </h2>
+        <p style="margin-bottom: 25px">
+          Thank you for contacting Gosain International School. We have received
+          your message and will get back to you within 24 hours.
+        </p>
+        <div
+          style="
+            background: var(--light-gray);
+            padding: 15px;
+            border-radius: var(--radius-md);
+            margin-bottom: 25px;
+          "
+        >
+          <p style="font-size: 0.9rem; margin: 0">
+            Our team will contact you on the phone number provided.
+          </p>
+        </div>
+        <button class="submit-btn" onclick="closeContactModal()">
+          <i class="fas fa-home"></i> Close
+        </button>
+      </div>
+    </div>
+
+  <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <img src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png" alt="GIS Logo" class="footer-logo">
+                        <p>Gosain International School (GIS) is a premier group of CBSE affiliated schools across Odisha, providing quality education with international standards since 2005. We are committed to nurturing future leaders through holistic education.</p>
+                        <div class="social-links" style="margin-top: 20px;">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+                            <li><a href="leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a></li>
+                            <li><a href="facilities.html"><i class="fas fa-chevron-right"></i> Facilities</a></li>
+                            <li><a href="campuses.html"><i class="fas fa-chevron-right"></i> Campuses</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Important Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                            <li><a href="notices.html"><i class="fas fa-chevron-right"></i> Notices</a></li>
+                            <li><a href="admission.html"><i class="fas fa-chevron-right"></i> Admission</a></li>
+                            <li><a href="careers.html"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Corporate Office:</strong><br>
+                                   Metro Greenwoods Trisulia,<br>
+                                Cuttack, Odisha - 754005
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    +91 9101-200-800, +91 9201-200-800, +91 9301-200-800
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    info@gosaingroup.com<br>
+                                    principal@gosaingroup.com
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2026 Gosain International School (GIS). All Rights Reserved. | G-Tech Solutions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // Mobile Navigation
+      const mobileToggle = document.getElementById("mobileToggle");
+      const navContainer = document.getElementById("navContainer");
+
+      mobileToggle.addEventListener("click", () => {
+        navContainer.classList.toggle("active");
+        mobileToggle.innerHTML = navContainer.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      // Contact Form Submission
+      const contactForm = document.getElementById("contactForm");
+      const contactModal = document.getElementById("contactModal");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Show success modal
+        contactModal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+
+        // Reset form
+        contactForm.reset();
+      });
+
+      function closeContactModal() {
+        contactModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      // Close modal when clicking outside
+      contactModal.addEventListener("click", (e) => {
+        if (e.target === contactModal) {
+          closeContactModal();
+        }
+      });
+
+      // Auto-format phone number
+      const phoneInput = document.getElementById("phone");
+      phoneInput.addEventListener("input", (e) => {
+        let value = e.target.value.replace(/\D/g, "");
+        if (value.length > 10) value = value.substring(0, 10);
+
+        if (value.length > 0) {
+          value = "+91 " + value;
+          if (value.length > 7) {
+            value = value.substring(0, 7) + " " + value.substring(7);
+          }
+          if (value.length > 12) {
+            value = value.substring(0, 12) + " " + value.substring(12);
+          }
+        }
+
+        e.target.value = value;
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 992) {
+          navContainer.classList.remove("active");
+          mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+    </script>
+  </body>
+</html>

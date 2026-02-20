@@ -1,0 +1,1868 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facilities - Gosain International School</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    />
+
+    <style>
+      /* Reuse all CSS variables and base styles */
+      :root {
+        --primary-blue: #0a2463;
+        --secondary-blue: #1e40af;
+        --accent-gold: #d4af37;
+        --light-gold: #f4e4c1;
+        --light-gray: #f8fafc;
+        --medium-gray: #e2e8f0;
+        --dark-gray: #334155;
+        --text-dark: #1e293b;
+        --white: #ffffff;
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-padding {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+
+      .section-title .title-decoration {
+        height: 4px;
+        width: 80px;
+        background: linear-gradient(
+          to right,
+          var(--primary-blue),
+          var(--accent-gold)
+        );
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+
+      .section-title p {
+        color: var(--dark-gray);
+        max-width: 700px;
+        margin: 15px auto 0;
+        font-size: 1.1rem;
+      }
+
+      /* Header - Same as previous pages */
+
+      .page-header {
+        background:
+          linear-gradient(rgba(10, 36, 99, 0.9), rgba(10, 36, 99, 0.8)),
+          url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 120px 0 80px;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        color: var(--white);
+      }
+
+      .breadcrumb {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+      }
+
+      .breadcrumb a {
+        color: var(--accent-gold);
+        text-decoration: none;
+      }
+
+      /* Facilities Navigation */
+      .facilities-nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 40px 0 60px;
+        flex-wrap: wrap;
+      }
+
+      .facility-btn {
+        padding: 12px 24px;
+        background: var(--light-gray);
+        border: none;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        color: var(--text-dark);
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .facility-btn:hover,
+      .facility-btn.active {
+        background: var(--primary-blue);
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      .facility-btn i {
+        font-size: 1.1rem;
+      }
+
+      /* Infrastructure Section */
+      .infrastructure-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .infra-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+        height: 100%;
+      }
+
+      .infra-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .infra-image {
+        height: 220px;
+        overflow: hidden;
+      }
+
+      .infra-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .infra-card:hover .infra-image img {
+        transform: scale(1.05);
+      }
+
+      .infra-info {
+        padding: 25px;
+      }
+
+      .infra-title {
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .infra-features {
+        list-style: none;
+        margin-top: 15px;
+      }
+
+      .infra-features li {
+        padding: 8px 0;
+        border-bottom: 1px solid var(--light-gray);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .infra-features li:last-child {
+        border-bottom: none;
+      }
+
+      .infra-features i {
+        color: var(--accent-gold);
+        width: 20px;
+      }
+
+      /* Labs Section */
+      .labs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+
+      .lab-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 30px;
+        text-align: center;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+        border-top: 5px solid var(--accent-gold);
+      }
+
+      .lab-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .lab-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--light-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+
+      .lab-icon i {
+        font-size: 2rem;
+        color: var(--primary-blue);
+      }
+
+      .equipment-list {
+        list-style: none;
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      .equipment-list li {
+        padding: 6px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .equipment-list i {
+        color: var(--accent-gold);
+        font-size: 0.9rem;
+      }
+
+      /* Library Section */
+      .library-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-top: 40px;
+      }
+
+      .library-image {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+      }
+
+      .library-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .library-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .stat-item {
+        background: var(--light-gray);
+        padding: 20px;
+        border-radius: var(--radius-md);
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        display: block;
+      }
+
+      .stat-label {
+        color: var(--dark-gray);
+        font-size: 0.9rem;
+      }
+
+      /* Sports Section */
+      .sports-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+
+      .sport-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+      }
+
+      .sport-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .sport-image {
+        height: 180px;
+        overflow: hidden;
+      }
+
+      .sport-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .sport-card:hover .sport-image img {
+        transform: scale(1.05);
+      }
+
+      .sport-info {
+        padding: 20px;
+      }
+
+      .sport-name {
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .coach-info {
+        background: var(--light-gray);
+        padding: 10px 15px;
+        border-radius: var(--radius-sm);
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+
+      /* Transport Section */
+      .transport-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-top: 40px;
+      }
+
+      .transport-image {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+      }
+
+      .transport-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .routes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .route-item {
+        background: var(--light-gray);
+        padding: 15px;
+        border-radius: var(--radius-md);
+        text-align: center;
+      }
+
+      .route-name {
+        color: var(--primary-blue);
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .route-details {
+        font-size: 0.9rem;
+        color: var(--dark-gray);
+      }
+
+      /* Safety Features */
+      .safety-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+
+      .safety-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 25px;
+        text-align: center;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+        border: 2px solid var(--light-gray);
+      }
+
+      .safety-card:hover {
+        border-color: var(--accent-gold);
+        transform: translateY(-5px);
+      }
+
+      .safety-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--light-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+      }
+
+      .safety-icon i {
+        color: var(--primary-blue);
+        font-size: 1.5rem;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .page-header h1 {
+          font-size: 2.5rem;
+        }
+
+        .section-padding {
+          padding: 60px 0;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+
+        .library-content,
+        .transport-content {
+          grid-template-columns: 1fr;
+        }
+
+        .infrastructure-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .facilities-nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .facility-btn {
+          width: 100%;
+          max-width: 300px;
+          justify-content: center;
+        }
+
+        .library-stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .routes-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .page-header h1 {
+          font-size: 1.8rem;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
+
+        .infrastructure-grid,
+        .labs-grid,
+        .sports-grid,
+        .safety-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .library-stats,
+        .routes-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .infra-image,
+        .sport-image {
+          height: 200px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span
+              >+91 91001-200-800 | +91 92001-200-800 | +91 93001-200-800</span
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@gosaingroup.com</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="container header-content">
+        <div class="logo-container">
+          <img
+            src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png"
+            alt="GIS Logo"
+            class="logo"
+          />
+          <div class="school-name">
+            <h1>Gosain International School</h1>
+            <div class="tagline">Excellence in Education Since 2005</div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href="index.html#registration" class="btn btn-accent">
+            <i class="fas fa-user-plus"></i> Admission Open
+          </a>
+          <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="nav-container" id="navContainer">
+          <ul class="nav-menu" id="navMenu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-school"></i> About Us</a>
+            </li>
+            <li>
+              <a href="academics.html"
+                ><i class="fas fa-graduation-cap"></i> Academics</a
+              >
+            </li>
+            <!-- <li><a href="leadership.html"><i class="fas fa-users"></i> Leadership</a></li> -->
+            <li>
+              <a href="facilities.html" class="active"
+                ><i class="fas fa-building"></i> Facilities</a
+              >
+            </li>
+            <li>
+              <a href="campuses.html"
+                ><i class="fas fa-map-marker-alt"></i> Campuses</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html"
+                ><i class="fas fa-phone-alt"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="container">
+        <h1>World-Class Facilities</h1>
+        <p>State-of-the-art infrastructure for holistic development</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> >
+          <span>Facilities</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facilities Navigation -->
+    <div class="container">
+      <div class="facilities-nav">
+        <button class="facility-btn active" data-facility="infrastructure">
+          <i class="fas fa-university"></i> Infrastructure
+        </button>
+        <button class="facility-btn" data-facility="labs">
+          <i class="fas fa-flask"></i> Laboratories
+        </button>
+        <button class="facility-btn" data-facility="library">
+          <i class="fas fa-book"></i> Library
+        </button>
+        <button class="facility-btn" data-facility="sports">
+          <i class="fas fa-futbol"></i> Sports
+        </button>
+        <button class="facility-btn" data-facility="transport">
+          <i class="fas fa-bus"></i> Transport
+        </button>
+        <button class="facility-btn" data-facility="safety">
+          <i class="fas fa-shield-alt"></i> Safety
+        </button>
+      </div>
+    </div>
+
+    <!-- Infrastructure Section -->
+    <section
+      id="infrastructure"
+      class="section-padding facility-section active"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2>Child-Friendly Infrastructure</h2>
+          <div class="title-decoration"></div>
+          <p>
+            Safe, engaging, and developmentally appropriate facilities for
+            Pre-Primary to Class 8
+          </p>
+        </div>
+
+        <div class="infrastructure-grid">
+          <!-- Age-appropriate Classrooms -->
+          <div class="infra-card">
+            <div class="infra-image">
+              <img
+                src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/facilities/Untitled%20design%20(9).png"
+                alt="Smart Classrooms"
+              />
+            </div>
+            <div class="infra-info">
+              <h3 class="infra-title">
+                <i class="fas fa-chalkboard-teacher"></i> Age-Appropriate
+                Classrooms
+              </h3>
+              <p>
+                Child-sized furniture, colorful learning corners, and
+                age-specific teaching aids for different developmental stages.
+              </p>
+              <ul class="infra-features">
+                <li>
+                  <i class="fas fa-check"></i> Color-coded Pre-Primary rooms
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Activity-based learning corners
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Interactive digital boards (Class
+                  1-8)
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Ergonomic child-sized furniture
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Play Areas & Outdoor Spaces -->
+          <div class="infra-card">
+            <div class="infra-image">
+              <img
+                src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/facilities/Untitled%20design%20(10).png"
+                alt="Play Areas"
+              />
+            </div>
+            <div class="infra-info">
+              <h3 class="infra-title">
+                <i class="fas fa-child"></i> Play Areas & Outdoor Spaces
+              </h3>
+              <p>
+                Safe, supervised play zones with age-appropriate equipment for
+                physical development and social interaction.
+              </p>
+              <ul class="infra-features">
+                <li><i class="fas fa-check"></i> Soft-surface playgrounds</li>
+                <li>
+                  <i class="fas fa-check"></i> Sand play areas (Pre-Primary)
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Swings & slides with safety mats
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Sports field for older children
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Creative Learning Centers -->
+          <div class="infra-card">
+            <div class="infra-image">
+              <img
+                src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/facilities/Untitled%20design%20(11).png"
+                alt="Creative Centers"
+              />
+            </div>
+            <div class="infra-info">
+              <h3 class="infra-title">
+                <i class="fas fa-paint-brush"></i> Creative Learning Centers
+              </h3>
+              <p>
+                Dedicated spaces for art, music, dance, and drama to nurture
+                creativity and self-expression.
+              </p>
+              <ul class="infra-features">
+                <li>
+                  <i class="fas fa-check"></i> Art & Craft studio with
+                  child-safe materials
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Music room with simple
+                  instruments
+                </li>
+                <li><i class="fas fa-check"></i> Dance space with mirrors</li>
+                <li>
+                  <i class="fas fa-check"></i> Drama & storytelling corner
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Discovery & Science Labs -->
+          <div class="infra-card">
+            <div class="infra-image">
+              <img
+                src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/facilities/Untitled%20design%20(12).png"
+                alt="Discovery Labs"
+              />
+            </div>
+            <div class="infra-info">
+              <h3 class="infra-title">
+                <i class="fas fa-flask"></i> Discovery & Science Labs
+              </h3>
+              <p>
+                Hands-on learning spaces for exploration, experimentation, and
+                developing scientific curiosity.
+              </p>
+              <ul class="infra-features">
+                <li>
+                  <i class="fas fa-check"></i> Sensory tables for Pre-Primary
+                </li>
+                <li><i class="fas fa-check"></i> Nature exploration corner</li>
+                <li>
+                  <i class="fas fa-check"></i> Simple science experiments lab
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Computer lab with age-appropriate
+                  software
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Reading & Literacy Center -->
+          <div class="infra-card">
+            <div class="infra-image">
+              <img
+                src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/facilities/Gemini_Generated_Image_57unru57unru57un.png"
+                alt="Reading Center"
+              />
+            </div>
+            <div class="infra-info">
+              <h3 class="infra-title">
+                <i class="fas fa-book-reader"></i> Reading & Literacy Center
+              </h3>
+              <p>
+                Cozy reading nooks and age-appropriate libraries to foster love
+                for books and reading.
+              </p>
+              <ul class="infra-features">
+                <li>
+                  <i class="fas fa-check"></i> Picture book corner (Pre-Primary)
+                </li>
+                <li><i class="fas fa-check"></i> Graded reading bookshelves</li>
+                <li><i class="fas fa-check"></i> Storytelling amphitheater</li>
+                <li>
+                  <i class="fas fa-check"></i> Digital story time facilities
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Health & Safety Facilities -->
+          <div class="infra-card">
+            <div class="infra-image">
+              <img
+                src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/facilities/Gemini_Generated_Image_i5wfpfi5wfpfi5wf.png"
+                alt="Health Facilities"
+              />
+            </div>
+            <div class="infra-info">
+              <h3 class="infra-title">
+                <i class="fas fa-first-aid"></i> Health & Safety Facilities
+              </h3>
+              <p>
+                Comprehensive safety measures and healthcare facilities ensuring
+                child wellbeing.
+              </p>
+              <ul class="infra-features">
+                <li><i class="fas fa-check"></i> CCTV monitored premises</li>
+                <li><i class="fas fa-check"></i> Age-appropriate washrooms</li>
+                <li><i class="fas fa-check"></i> On-call pediatrician</li>
+                <li>
+                  <i class="fas fa-check"></i> Child-proof safety features
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Features Section -->
+        <div
+          style="
+            margin-top: 50px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+            padding: 30px;
+            border-radius: 15px;
+          "
+        >
+          <h3
+            style="
+              text-align: center;
+              color: var(--primary-blue);
+              margin-bottom: 30px;
+            "
+          >
+            <i
+              class="fas fa-star"
+              style="color: var(--accent-gold); margin-right: 10px"
+            ></i>
+            Special Features for Different Age Groups
+          </h3>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 25px;
+            "
+          >
+            <!-- Pre-Primary Specific -->
+            <div
+              style="
+                background: white;
+                padding: 25px;
+                border-radius: 12px;
+                border-left: 5px solid #ff6b6b;
+              "
+            >
+              <h4
+                style="
+                  color: #ff6b6b;
+                  margin-bottom: 15px;
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <i class="fas fa-baby"></i> Pre-Primary (Play Group - UKG)
+              </h4>
+              <ul style="padding-left: 20px">
+                <li style="margin-bottom: 8px">
+                  Nap rooms with individual cots
+                </li>
+                <li style="margin-bottom: 8px">Diaper changing stations</li>
+                <li style="margin-bottom: 8px">Indoor soft play areas</li>
+                <li style="margin-bottom: 8px">Parent viewing gallery</li>
+                <li>Separate entry/exit for young children</li>
+              </ul>
+            </div>
+
+            <!-- Primary Specific -->
+            <div
+              style="
+                background: white;
+                padding: 25px;
+                border-radius: 12px;
+                border-left: 5px solid #4caf50;
+              "
+            >
+              <h4
+                style="
+                  color: #4caf50;
+                  margin-bottom: 15px;
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <i class="fas fa-atom"></i> Primary (Class I-V)
+              </h4>
+              <ul style="padding-left: 20px">
+                <li style="margin-bottom: 8px">Activity-based learning labs</li>
+                <li style="margin-bottom: 8px">
+                  Mathematics manipulatives corner
+                </li>
+                <li style="margin-bottom: 8px">Outdoor learning garden</li>
+                <li style="margin-bottom: 8px">
+                  Audio-visual learning stations
+                </li>
+                <li>Child-friendly digital learning tools</li>
+              </ul>
+            </div>
+
+            <!-- Middle School Specific -->
+            <div
+              style="
+                background: white;
+                padding: 25px;
+                border-radius: 12px;
+                border-left: 5px solid #2196f3;
+              "
+            >
+              <h4
+                style="
+                  color: #2196f3;
+                  margin-bottom: 15px;
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <i class="fas fa-graduation-cap"></i> Middle School (Class
+                VI-VIII)
+              </h4>
+              <ul style="padding-left: 20px">
+                <li style="margin-bottom: 8px">Subject-specific labs</li>
+                <li style="margin-bottom: 8px">
+                  Computer lab with coding stations
+                </li>
+                <li style="margin-bottom: 8px">Career counseling room</li>
+                <li style="margin-bottom: 8px">Indoor games facility</li>
+                <li>Project work stations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Safety & Security Section -->
+        <div
+          style="
+            margin-top: 40px;
+            padding: 25px;
+            background: #fff8e1;
+            border-radius: 12px;
+            border: 2px solid #ffd54f;
+          "
+        >
+          <h3
+            style="
+              color: #e65100;
+              margin-bottom: 20px;
+              display: flex;
+              align-items: center;
+              gap: 15px;
+            "
+          >
+            <i class="fas fa-shield-alt"></i> Safety & Security Measures
+          </h3>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 20px;
+            "
+          >
+            <div style="display: flex; align-items: start; gap: 15px">
+              <i
+                class="fas fa-camera"
+                style="color: #2196f3; font-size: 1.2rem; margin-top: 5px"
+              ></i>
+              <div>
+                <h5 style="margin: 0 0 5px 0; color: var(--primary-blue)">
+                  CCTV Surveillance
+                </h5>
+                <p style="margin: 0; font-size: 0.95rem">
+                  24/7 monitoring with 200+ cameras across campus
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: start; gap: 15px">
+              <i
+                class="fas fa-user-shield"
+                style="color: #4caf50; font-size: 1.2rem; margin-top: 5px"
+              ></i>
+              <div>
+                <h5 style="margin: 0 0 5px 0; color: var(--primary-blue)">
+                  Trained Security Staff
+                </h5>
+                <p style="margin: 0; font-size: 0.95rem">
+                  Background-verified guards and female attendants
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: start; gap: 15px">
+              <i
+                class="fas fa-fire-extinguisher"
+                style="color: #f44336; font-size: 1.2rem; margin-top: 5px"
+              ></i>
+              <div>
+                <h5 style="margin: 0 0 5px 0; color: var(--primary-blue)">
+                  Fire Safety
+                </h5>
+                <p style="margin: 0; font-size: 0.95rem">
+                  Regular drills, fire extinguishers, emergency exits
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: start; gap: 15px">
+              <i
+                class="fas fa-ambulance"
+                style="color: #9c27b0; font-size: 1.2rem; margin-top: 5px"
+              ></i>
+              <div>
+                <h5 style="margin: 0 0 5px 0; color: var(--primary-blue)">
+                  Medical Support
+                </h5>
+                <p style="margin: 0; font-size: 0.95rem">
+                  Tie-up with nearby hospitals, emergency protocols
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Laboratories Section -->
+    <section
+      id="labs"
+      class="section-padding facility-section"
+      style="background-color: var(--light-gray)"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2>Advanced Laboratories</h2>
+          <div class="title-decoration"></div>
+          <p>Hands-on learning with modern equipment and technology</p>
+        </div>
+
+        <div class="labs-grid">
+          <div class="lab-card">
+            <div class="lab-icon">
+              <i class="fas fa-vial"></i>
+            </div>
+            <h3>Physics Lab</h3>
+            <p>
+              Equipped for experiments in mechanics, optics, electricity, and
+              modern physics.
+            </p>
+            <ul class="equipment-list">
+              <li><i class="fas fa-check"></i> Laser Kits</li>
+              <li><i class="fas fa-check"></i> Digital Oscilloscopes</li>
+              <li><i class="fas fa-check"></i> Spectrometers</li>
+              <li><i class="fas fa-check"></i> Advanced Telescope</li>
+            </ul>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3>Chemistry Lab</h3>
+            <p>
+              Modern laboratory with fume hoods, digital balances, and safety
+              equipment.
+            </p>
+            <ul class="equipment-list">
+              <li><i class="fas fa-check"></i> Digital pH Meters</li>
+              <li><i class="fas fa-check"></i> Spectrophotometers</li>
+              <li><i class="fas fa-check"></i> Fume Hoods</li>
+              <li><i class="fas fa-check"></i> Chemical Storage</li>
+            </ul>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-icon">
+              <i class="fas fa-dna"></i>
+            </div>
+            <h3>Biology Lab</h3>
+            <p>
+              Microscopes, specimens, and equipment for biological studies and
+              research.
+            </p>
+            <ul class="equipment-list">
+              <li><i class="fas fa-check"></i> Compound Microscopes</li>
+              <li><i class="fas fa-check"></i> DNA Extraction Kit</li>
+              <li><i class="fas fa-check"></i> Herbarium</li>
+              <li><i class="fas fa-check"></i> Specimen Collection</li>
+            </ul>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Robotics Lab</h3>
+            <p>
+              Innovation hub with robotics kits, 3D printers, and programming
+              stations.
+            </p>
+            <ul class="equipment-list">
+              <li><i class="fas fa-check"></i> Arduino Kits</li>
+              <li><i class="fas fa-check"></i> 3D Printers</li>
+              <li><i class="fas fa-check"></i> Drone Kits</li>
+              <li><i class="fas fa-check"></i> Programming Software</li>
+            </ul>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-icon">
+              <i class="fas fa-language"></i>
+            </div>
+            <h3>Language Lab</h3>
+            <p>
+              Digital language learning system with headphones and recording
+              facilities.
+            </p>
+            <ul class="equipment-list">
+              <li><i class="fas fa-check"></i> Digital Headsets</li>
+              <li><i class="fas fa-check"></i> Recording Studios</li>
+              <li><i class="fas fa-check"></i> Language Software</li>
+              <li><i class="fas fa-check"></i> Interactive Sessions</li>
+            </ul>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Geography Lab</h3>
+            <p>
+              Maps, globes, weather instruments, and GIS software for
+              geographical studies.
+            </p>
+            <ul class="equipment-list">
+              <li><i class="fas fa-check"></i> Weather Station</li>
+              <li><i class="fas fa-check"></i> GIS Software</li>
+              <li><i class="fas fa-check"></i> Topographic Maps</li>
+              <li><i class="fas fa-check"></i> Satellite Imagery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Library Section -->
+    <section id="library" class="section-padding facility-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Digital Library & Resource Center</h2>
+          <div class="title-decoration"></div>
+          <p>Extensive collection of books, journals, and digital resources</p>
+        </div>
+
+        <div class="library-content">
+          <div class="library-image">
+            <img
+              src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/facilities/Gemini_Generated_Image_57unru57unru57un.png"
+              alt="Library"
+            />
+          </div>
+
+          <div>
+            <h3 style="color: var(--primary-blue); margin-bottom: 20px">
+              Knowledge Hub
+            </h3>
+            <p>
+              Our library is a vibrant learning space with comfortable reading
+              areas, computer stations, and study rooms. The digital library
+              provides access to thousands of e-books, journals, and online
+              databases.
+            </p>
+
+            <div class="library-stats">
+              <div class="stat-item">
+                <span class="stat-number">25,000+</span>
+                <span class="stat-label">Books</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Magazines & Journals</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10,000+</span>
+                <span class="stat-label">E-books</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">Daily Newspapers</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 30px">
+              <h4 style="color: var(--secondary-blue); margin-bottom: 15px">
+                Library Features:
+              </h4>
+              <ul style="columns: 2; list-style: none">
+                <li style="padding: 5px 0">
+                  <i
+                    class="fas fa-check"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Reading Room
+                </li>
+                <li style="padding: 5px 0">
+                  <i
+                    class="fas fa-check"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Digital Catalog
+                </li>
+                <li style="padding: 5px 0">
+                  <i
+                    class="fas fa-check"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Online Databases
+                </li>
+                <li style="padding: 5px 0">
+                  <i
+                    class="fas fa-check"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Research Assistance
+                </li>
+                <li style="padding: 5px 0">
+                  <i
+                    class="fas fa-check"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Audio-Visual Section
+                </li>
+                <li style="padding: 5px 0">
+                  <i
+                    class="fas fa-check"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Quiet Study Zones
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sports Section -->
+    <!-- <section id="sports" class="section-padding facility-section" style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sports Facilities</h2>
+                <div class="title-decoration"></div>
+                <p>Comprehensive sports infrastructure for physical development</p>
+            </div>
+            
+            <div class="sports-grid">
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1490&q=80" alt="Basketball Court">
+                    </div>
+                    <div class="sport-info">
+                        <h3 class="sport-name">
+                            <i class="fas fa-basketball-ball"></i> Basketball
+                        </h3>
+                        <p>Professional basketball courts with floodlights for evening practice.</p>
+                        <div class="coach-info">
+                            <strong>Coach:</strong> Mr. Rajesh Kumar
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Football Ground">
+                    </div>
+                    <div class="sport-info">
+                        <h3 class="sport-name">
+                            <i class="fas fa-futbol"></i> Football
+                        </h3>
+                        <p>Full-size football ground with natural turf and spectator stands.</p>
+                        <div class="coach-info">
+                            <strong>Coach:</strong> Mr. Sanjay Singh
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1595435934247-5d33b7f92c70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Swimming Pool">
+                    </div>
+                    <div class="sport-info">
+                        <h3 class="sport-name">
+                            <i class="fas fa-swimmer"></i> Swimming
+                        </h3>
+                        <p>Olympic-size swimming pool with separate lanes for training.</p>
+                        <div class="coach-info">
+                            <strong>Coach:</strong> Ms. Priya Sharma
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Indoor Stadium">
+                    </div>
+                    <div class="sport-info">
+                        <h3 class="sport-name">
+                            <i class="fas fa-dumbbell"></i> Indoor Sports
+                        </h3>
+                        <p>Air-conditioned indoor stadium for badminton, table tennis, and yoga.</p>
+                        <div class="coach-info">
+                            <strong>Coach:</strong> Multiple Specialists
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Athletics Track">
+                    </div>
+                    <div class="sport-info">
+                        <h3 class="sport-name">
+                            <i class="fas fa-running"></i> Athletics
+                        </h3>
+                        <p>400-meter synthetic track for running events and field events area.</p>
+                        <div class="coach-info">
+                            <strong>Coach:</strong> Mr. Amit Das
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Gymnastics Hall">
+                    </div>
+                    <div class="sport-info">
+                        <h3 class="sport-name">
+                            <i class="fas fa-child"></i> Gymnastics
+                        </h3>
+                        <p>Specialized gymnastics hall with mats, beams, and safety equipment.</p>
+                        <div class="coach-info">
+                            <strong>Coach:</strong> Ms. Anjali Roy
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Transport Section -->
+    <section id="transport" class="section-padding facility-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Transport & Commute</h2>
+          <div class="title-decoration"></div>
+          <p>Safe and reliable transportation for students</p>
+        </div>
+
+        <div class="transport-content">
+          <div>
+            <h3 style="color: var(--primary-blue); margin-bottom: 20px">
+              Safe School Transport
+            </h3>
+            <p>
+              Our fleet of GPS-enabled buses ensures safe and punctual
+              transportation for students. All vehicles are maintained to the
+              highest safety standards with trained drivers and attendants.
+            </p>
+
+            <div style="margin-top: 30px">
+              <h4 style="color: var(--secondary-blue); margin-bottom: 15px">
+                Safety Features:
+              </h4>
+              <ul style="list-style: none; margin-bottom: 25px">
+                <li style="padding: 8px 0">
+                  <i
+                    class="fas fa-check-circle"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  GPS Tracking System
+                </li>
+                <li style="padding: 8px 0">
+                  <i
+                    class="fas fa-check-circle"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  CCTV Cameras
+                </li>
+                <li style="padding: 8px 0">
+                  <i
+                    class="fas fa-check-circle"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  First Aid Kits
+                </li>
+                <li style="padding: 8px 0">
+                  <i
+                    class="fas fa-check-circle"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Female Attendants
+                </li>
+                <li style="padding: 8px 0">
+                  <i
+                    class="fas fa-check-circle"
+                    style="color: var(--accent-gold); margin-right: 10px"
+                  ></i>
+                  Speed Governors
+                </li>
+              </ul>
+            </div>
+
+            <!-- <div class="routes-grid">
+                        <div class="route-item">
+                            <div class="route-name">Route 1</div>
+                            <div class="route-details">Patia to School</div>
+                        </div>
+                        <div class="route-item">
+                            <div class="route-name">Route 2</div>
+                            <div class="route-details">Nayapalli to School</div>
+                        </div>
+                        <div class="route-item">
+                            <div class="route-name">Route 3</div>
+                            <div class="route-details">Khandagiri to School</div>
+                        </div>
+                        <div class="route-item">
+                            <div class="route-name">Route 4</div>
+                            <div class="route-details">Baramunda to School</div>
+                        </div>
+                    </div> -->
+          </div>
+
+          <div class="transport-image">
+            <img
+              src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/facilities/Gemini_Generated_Image_jyey88jyey88jyey.png"
+              alt="School Bus"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety Features Section -->
+    <section
+      id="safety"
+      class="section-padding facility-section"
+      style="background-color: var(--light-gray)"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2>Safety & Security</h2>
+          <div class="title-decoration"></div>
+          <p>Comprehensive safety measures for student protection</p>
+        </div>
+
+        <div class="safety-grid">
+          <div class="safety-card">
+            <div class="safety-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <h4>24/7 CCTV Surveillance</h4>
+            <p>
+              200+ cameras covering all areas including classrooms, corridors,
+              and playgrounds.
+            </p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h4>Trained Security Staff</h4>
+            <p>
+              Professional security personnel with background verification and
+              regular training.
+            </p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">
+              <i class="fas fa-fire-extinguisher"></i>
+            </div>
+            <h4>Fire Safety Systems</h4>
+            <p>
+              Fire alarms, extinguishers, and regular safety drills for
+              emergency preparedness.
+            </p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">
+              <i class="fas fa-hand-paper"></i>
+            </div>
+            <h4>Child Protection Policy</h4>
+            <p>
+              Strict policies and regular training for staff on child protection
+              and safety.
+            </p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h4>Medical Emergency Plan</h4>
+            <p>
+              Tie-up with nearby hospitals and ambulance services for medical
+              emergencies.
+            </p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4>Cyber Safety</h4>
+            <p>
+              Internet filtering, monitoring, and education on online safety for
+              students.
+            </p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">
+              <i class="fas fa-water"></i>
+            </div>
+            <h4>Water & Sanitation</h4>
+            <p>
+              RO water purification systems and regular hygiene maintenance.
+            </p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">
+              <i class="fas fa-ambulance"></i>
+            </div>
+            <h4>Emergency Response</h4>
+            <p>
+              Quick response team and evacuation plans for various emergency
+              scenarios.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px">
+          <div
+            style="
+              background: var(--white);
+              padding: 30px;
+              border-radius: var(--radius-lg);
+              box-shadow: var(--shadow-md);
+              max-width: 800px;
+              margin: 0 auto;
+            "
+          >
+            <h3 style="color: var(--primary-blue); margin-bottom: 20px">
+              Safety Certifications
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+              "
+            >
+              <div style="text-align: center">
+                <div
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    background: var(--light-gold);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 10px;
+                  "
+                >
+                  <i class="fas fa-certificate"></i>
+                </div>
+                <span>Fire Safety Compliance</span>
+              </div>
+              <div style="text-align: center">
+                <div
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    background: var(--light-gold);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 10px;
+                  "
+                >
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <span>Child Safety Certified</span>
+              </div>
+              <div style="text-align: center">
+                <div
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    background: var(--light-gold);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 10px;
+                  "
+                >
+                  <i class="fas fa-building"></i>
+                </div>
+                <span>Building Structure Safety</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <img src="https://trustimage.nyc3.cdn.digitaloceanspaces.com/logo/logo-01%20(1).png" alt="GIS Logo" class="footer-logo">
+                        <p>Gosain International School (GIS) is a premier group of CBSE affiliated schools across Odisha, providing quality education with international standards since 2005. We are committed to nurturing future leaders through holistic education.</p>
+                        <div class="social-links" style="margin-top: 20px;">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="academics.html"><i class="fas fa-chevron-right"></i> Academics</a></li>
+                            <li><a href="leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a></li>
+                            <li><a href="facilities.html"><i class="fas fa-chevron-right"></i> Facilities</a></li>
+                            <li><a href="campuses.html"><i class="fas fa-chevron-right"></i> Campuses</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Important Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                            <li><a href="notices.html"><i class="fas fa-chevron-right"></i> Notices</a></li>
+                            <li><a href="admission.html"><i class="fas fa-chevron-right"></i> Admission</a></li>
+                            <li><a href="careers.html"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Corporate Office:</strong><br>
+                                   Metro Greenwoods Trisulia,<br>
+                                Cuttack, Odisha - 754005
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    +91 9101-200-800, +91 9201-200-800, +91 9301-200-800
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    info@gosaingroup.com<br>
+                                    principal@gosaingroup.com
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2026 Gosain International School (GIS). All Rights Reserved. | G-Tech Solutions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // Mobile Navigation
+      const mobileToggle = document.getElementById("mobileToggle");
+      const navContainer = document.getElementById("navContainer");
+
+      mobileToggle.addEventListener("click", () => {
+        navContainer.classList.toggle("active");
+        mobileToggle.innerHTML = navContainer.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      // Facilities Navigation
+      const facilityBtns = document.querySelectorAll(".facility-btn");
+      const facilitySections = document.querySelectorAll(".facility-section");
+
+      facilityBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const facility = btn.getAttribute("data-facility");
+
+          // Remove active class from all buttons and sections
+          facilityBtns.forEach((b) => b.classList.remove("active"));
+          facilitySections.forEach((section) =>
+            section.classList.remove("active"),
+          );
+
+          // Add active class to clicked button
+          btn.classList.add("active");
+
+          // Show corresponding section
+          const targetSection = document.getElementById(facility);
+          if (targetSection) {
+            targetSection.classList.add("active");
+
+            // Smooth scroll to section
+            window.scrollTo({
+              top: targetSection.offsetTop - 100,
+              behavior: "smooth",
+            });
+          }
+
+          // Close mobile menu if open
+          if (window.innerWidth <= 992) {
+            navContainer.classList.remove("active");
+            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+          }
+        });
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 992) {
+          navContainer.classList.remove("active");
+          mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+
+      // Initialize first section as active
+      document.querySelector(".facility-section").classList.add("active");
+
+      // Add animation to facility cards on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all facility cards for animation
+      document
+        .querySelectorAll(".infra-card, .lab-card, .sport-card, .safety-card")
+        .forEach((card) => {
+          card.style.opacity = "0";
+          card.style.transform = "translateY(20px)";
+          card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+          observer.observe(card);
+        });
+    </script>
+  </body>
+</html>
